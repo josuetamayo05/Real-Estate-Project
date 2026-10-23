@@ -5,6 +5,10 @@ import { PropertyDetail } from './pages/PropertyDetail';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 
+import { AdminLogin } from './pages/admin/AdminLogin';
+import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { AdminPropertyEdit } from './pages/admin/AdminPropertyEdit';
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,6 +18,11 @@ export default function App() {
         <Route path="/propiedad/:slug" element={<PropertyDetail />} />
         <Route path="/sobre-nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
+
+        {/* Panel Administrativo */}
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/nueva" element={<AdminPropertyEdit />} />
       </Routes>
     </BrowserRouter>
   );

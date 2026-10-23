@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 import { FacebookIcon, InstagramIcon, YoutubeIcon } from '../icons/SocialIcons';
 

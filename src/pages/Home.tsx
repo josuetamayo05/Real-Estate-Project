@@ -1,4 +1,3 @@
-import { seedPropertiesToFirestore } from '../services/propertyService';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { Hero } from '../components/home/Hero';
@@ -14,15 +13,6 @@ export function Home() {
       <FilterBar />
       <FeaturedProperties />
 
-      {/* Botón temporal de sincronización con Firestore */}
-      <div className="py-6 text-center bg-gray-200">
-        <button 
-          onClick={seedPropertiesToFirestore}
-          className="px-4 py-2 bg-black text-[#C9A961] text-xs font-bold rounded uppercase tracking-wider hover:bg-gray-800"
-        >
-          🔥 Sincronizar catálogo inicial a Firestore
-        </button>
-      </div>
 
       {/* SOBRE NOSOTROS Y CONTACTO DIRECTO (Réplica exacta de la maqueta) */}
       <section id="nosotros" className="max-w-6xl mx-auto px-4 mb-20">
