@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { Logo } from '../logo/Logo';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,16 +13,9 @@ export function Navbar() {
     <nav className="bg-[#0A0A0A]/95 backdrop-blur-md text-white fixed top-0 left-0 right-0 z-50 border-b border-[#C9A961]/20">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        {/* Logo Monograma */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 border border-[#C9A961] flex items-center justify-center rounded-sm">
-            <span className="font-serif text-2xl font-bold text-[#C9A961]">M</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-sm tracking-widest font-bold text-white">MARIANNE</span>
-            <span className="text-[9px] tracking-[0.3em] uppercase text-[#C9A961]">Houses</span>
-          </div>
-        </Link>
+        <a href="/" className="flex items-center">
+          <Logo className="h-12 sm:h-20 w-auto" />
+        </a>
 
         {/* Menú Desktop */}
         <div className="hidden md:flex items-center space-x-8 text-xs font-semibold uppercase tracking-widest">
