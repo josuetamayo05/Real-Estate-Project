@@ -16,15 +16,15 @@ export function Contact() {
             <div className="space-y-4 text-xs text-gray-600">
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-[#C9A961]" />
-                <span>Via Cernazicuta, Pandolora 533 A, Habana</span>
+                <span>Miramar, La Habana</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#C9A961]" />
-                <span>(112) 357 7880</span>
+                <span>+53 52365254</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#C9A961]" />
-                <span>mariannehouses.com</span>
+                <span>marianne9820@gmail.com</span>
               </div>
             </div>
           </div>

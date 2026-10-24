@@ -34,15 +34,15 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-xs text-gray-700">
           <div className="flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5 text-gray-800" />
-            <span>Via Cernazicuta, Pandolora 533 A, Habana, ka habana</span>
+            <span>Miramar, Playa, La Habana</span>
           </div>
           <div className="flex items-center gap-1.5">
             <Phone className="w-3.5 h-3.5 text-gray-800" />
-            <span>(112) 357 7880</span>
+            <span>+53 52365254</span>
           </div>
           <div className="flex items-center gap-1.5">
             <Mail className="w-3.5 h-3.5 text-gray-800" />
-            <span>mariannehouses.com</span>
+            <span>marianne9820@gmail.com</span>
           </div>
         </div>
 

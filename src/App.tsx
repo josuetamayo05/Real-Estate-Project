@@ -9,9 +9,13 @@ import { AdminLogin } from './pages/admin/AdminLogin';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { AdminPropertyEdit } from './pages/admin/AdminPropertyEdit';
 
+import { WhatsAppButton } from './components/common/WhatsAppButton';
+
 export default function App() {
   return (
     <BrowserRouter>
+      <WhatsAppButton phoneNumber="5352365254" />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/propiedades" element={<Properties />} />
