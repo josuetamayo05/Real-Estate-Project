@@ -57,6 +57,7 @@ export const MOCK_PROPERTIES: Property[] = [
     description: `Magnífica y exclusiva casa de dos niveles situada en el corazón de Miramar, una de las zonas residenciales más cotizadas y prestigiosas de La Habana.\n\n• Planta Baja: Jardín frontal, recibidor, amplia sala principal, saleta independiente, oficina privada, gran patio tropical con piscina privada y garaje techado para 4 carros.\n• Planta Alta: 7 habitaciones y media con 8 baños distribuidos estratégicamente.\n• Respaldo Energético Avanzado: Sistema fotovoltaico con 28 paneles solares, planta diésel de respaldo y planta de gasolina adicional.\n\nIdeal tanto para residencia de alto standing, embajadas, sede corporativa como para proyecto turístico boutique de máxima categoría.`,
     features: ['28 Paneles Solares', 'Planta Diésel + Gasolina', 'Piscina Privada', 'Garaje 4 Autos', 'Despacho/Oficina', 'Zona Diplomática'],
     images: [
+      '/properties/casa-3/first.jpg',
       '/properties/casa-2/1980.jpg',
       '/properties/casa-2/1981.jpg',
       '/properties/casa-2/1982.jpg',
@@ -75,7 +76,6 @@ export const MOCK_PROPERTIES: Property[] = [
       '/properties/casa-2/2008.jpg',
       '/properties/casa-2/2010.jpg',
       '/properties/casa-2/2015.jpg',
-      '/properties/casa-2/2018.jpg',
       '/properties/casa-2/2021.jpg',
       '/properties/casa-2/2022.jpg',
       '/properties/casa-2/2029.jpg'
