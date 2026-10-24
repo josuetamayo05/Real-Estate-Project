@@ -19,10 +19,10 @@ export function FilterBar() {
   };
 
   return (
-    <section className="relative z-20 max-w-5xl mx-auto px-3 sm:px-6 -mt-10 sm:-mt-12 mb-12">
-      <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 border border-gray-100">
+    /* CAMBIO CLAVE: Se quita el -mt-10 / -mt-12 para que no tape la imagen superior */
+    <section className="relative z-20 max-w-5xl mx-auto px-3 sm:px-6 py-6 mb-12">
+      <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 border border-gray-100">
         
-        {/* grid-cols-2 en móviles para que se acomoden limpios como en el diseño de referencia */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 items-end">
           
           {/* Operación */}
@@ -32,9 +32,7 @@ export function FilterBar() {
             </label>
             <select 
               value={operation}
-              onChange={(e) => {
-                setOperation(e.target.value);
-              }}
+              onChange={(e) => setOperation(e.target.value)}
               className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
               <option value="Venta/Renta">Venta/Renta</option>
@@ -50,9 +48,7 @@ export function FilterBar() {
             </label>
             <select 
               value={zone}
-              onChange={(e) => {
-                setZone(e.target.value);
-              }}
+              onChange={(e) => setZone(e.target.value)}
               className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
               <option value="Kohly/Siboney">Kohly/Siboney</option>
@@ -71,9 +67,7 @@ export function FilterBar() {
             </label>
             <select 
               value={bedrooms}
-              onChange={(e) => {
-                setBedrooms(e.target.value);
-              }}
+              onChange={(e) => setBedrooms(e.target.value)}
               className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
               <option value="1">1</option>
@@ -84,7 +78,7 @@ export function FilterBar() {
             </select>
           </div>
 
-          {/* Precio Slider (Toma 2 columnas en móviles para alineación perfecta) */}
+          {/* Precio Slider */}
           <div className="col-span-2 md:col-span-1 mt-1 md:mt-0">
             <div className="flex justify-between items-center mb-1">
               <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gray-700">

@@ -1,32 +1,41 @@
-import { Link } from 'react-router-dom';
-
 export function Hero() {
   return (
-    <header id="inicio" className="relative min-h-[75vh] flex items-center justify-center bg-[#0A0A0A] pt-28 pb-24 px-4 overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <header id="inicio" className="relative w-full bg-black pt-20 overflow-hidden">
+      
+      {/* CONTENEDOR CON LA PROPORCIÓN EXACTA DE LA IMAGEN */}
+      <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] max-h-[85vh] flex items-center justify-center">
+        
+        {/* IMAGEN DE FONDO (Mantiene su proporción sin estirarse ni deformarse) */}
         <img 
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" 
-          alt="Mansión de Lujo Marianne Houses" 
-          className="w-full h-full object-cover opacity-50"
+          src="/home.jpeg" // o la ruta de tu imagen de la casa moderna
+          alt="Marianne Houses" 
+          className="absolute inset-0 w-full h-full object-contain sm:object-cover object-center opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/30 to-black/60" />
+
+        {/* OVERLAY SUTIL */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+
+        {/* CONTENIDO TEXTO CENTRADO */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 py-8">
+          <h1 className="font-serif text-2xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C9A961]">
+            EXCLUSIVIDAD Y ELEGANCIA<br />
+            EN LA HABANA
+          </h1>
+
+          <p className="text-gray-200 text-[11px] sm:text-sm md:text-base font-light tracking-wide max-w-xl mx-auto mb-6">
+            Marianne Houses: Su experto en residencias independientes de alto nivel.
+          </p>
+
+          <a 
+            href="#propiedades"
+            className="inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3.5 bg-gradient-to-r from-[#C9A961] to-[#b89750] hover:from-[#b89750] hover:to-[#a78640] text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest rounded-md shadow-xl transition-all"
+          >
+            VER PROPIEDADES
+          </a>
+        </div>
+
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#C9A961] leading-tight tracking-wide mb-4 drop-shadow-md">
-          EXCLUSIVIDAD Y ELEGANCIA<br />
-          <span className="text-white">EN LA HABANA</span>
-        </h1>
-        <p className="text-gray-200 text-xs sm:text-sm md:text-base font-light tracking-wide max-w-xl mx-auto mb-8 drop-shadow">
-          Marianne Houses: Su experto en residencias independientes de alto nivel.
-        </p>
-        <Link 
-          to="/propiedades"
-          className="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-[#D4AF37] to-[#C9A961] hover:brightness-110 text-black font-extrabold text-xs uppercase tracking-widest rounded shadow-xl transition-all"
-        >
-          VER PROPIEDADES
-        </Link>
-      </div>
     </header>
   );
 }
