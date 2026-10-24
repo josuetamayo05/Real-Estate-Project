@@ -4,6 +4,8 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { PropertyCard } from '../components/property/PropertyCard';
 import { MOCK_PROPERTIES } from '../data/mockProperties';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Properties() {
   const [searchParams] = useSearchParams();
@@ -11,7 +13,7 @@ export function Properties() {
   const [operation, setOperation] = useState(searchParams.get('operacion') || '');
   const [zone, setZone] = useState(searchParams.get('zona') || '');
   const [bedrooms, setBedrooms] = useState(searchParams.get('habitaciones') || '');
-  const [maxPrice, setMaxPrice] = useState(Number(searchParams.get('precioMax')) || 2000000);
+  const [maxPrice, setMaxPrice] = useState(Number(searchParams.get('precioMax')) || 3000000);
 
   const filteredProperties = useMemo(() => {
     return MOCK_PROPERTIES.filter((p) => {
@@ -26,6 +28,21 @@ export function Properties() {
   return (
     <div className="bg-[#F8F8F8] min-h-screen font-sans text-[#1A1A1A]">
       <Navbar />
+
+      {/* BOTÓN VOLVER AL INICIO */}
+        <div className="mb-6 flex items-center justify-between">
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-600 hover:text-[#C9A961] transition-colors bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Volver al Inicio
+          </Link>
+
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+            Catálogo de Propiedades
+          </span>
+        </div>
 
       <main className="max-w-6xl mx-auto px-4 pt-28 pb-20">
         <h1 className="font-serif text-3xl font-bold text-[#1A1A1A] mb-2 text-center">

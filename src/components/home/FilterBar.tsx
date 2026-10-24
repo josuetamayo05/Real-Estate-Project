@@ -6,14 +6,14 @@ export function FilterBar() {
   const [operation, setOperation] = useState('Venta/Renta');
   const [zone, setZone] = useState('Todas');
   const [bedrooms, setBedrooms] = useState('3');
-  const [price, setPrice] = useState(1000000);
+  const [price, setPrice] = useState(3000000);
 
   const handleFilter = () => {
     const params = new URLSearchParams();
     if (operation !== 'Venta/Renta') params.set('operacion', operation);
     if (zone !== 'Todas') params.set('zona', zone);
     if (bedrooms) params.set('habitaciones', bedrooms);
-    if (price < 2000000) params.set('precioMax', price.toString());
+    if (price < 3000000) params.set('precioMax', price.toString());
 
     navigate(`/propiedades?${params.toString()}`);
   };
@@ -92,7 +92,7 @@ export function FilterBar() {
             <input 
               type="range" 
               min="100000" 
-              max="2500000" 
+              max="3000000" 
               step="50000"
               value={price}
               onChange={(e) => setPrice(Number(e.target.value))}

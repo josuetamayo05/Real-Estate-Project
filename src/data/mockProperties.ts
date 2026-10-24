@@ -1,9 +1,9 @@
 import type { Property } from '../types';
 
-export const MOCK_PROPERTIES: Property[] = [
+export const mockProperties: Property[] = [
   {
     id: 'casa-1',
-    title: 'Imponente Residencia con Piscina y Ranchón',
+    title: 'Imponente Residencia con Piscina y Ranchón en Playa',
     slug: 'imponente-residencia-con-piscina-playa',
     operation: 'Venta',
     zone: 'Playa',
@@ -16,8 +16,8 @@ export const MOCK_PROPERTIES: Property[] = [
     area: 550,
     parking: 2,
     propertyType: 'Villa',
-    description: `Una propiedad imponente con una distribución perfecta:\n\n• Planta Baja: Jardín, portal, garaje cerrado y carport para 2 carros, sala recibidor, cocina, comedor, 2 habitaciones, 3 baños, patio con ranchón y piscina.\n• Segunda Planta: 4 habitaciones y 4 baños.\n\nContando con respaldo energético, la inversión perfecta para hogar o negocio de renta vacacional ya que es llegar y vivirla.`,
-    features: ['Piscina', 'Ranchón', 'Garaje cerrado', 'Jardín', 'Respaldo energético', 'Patio amplio'],
+    description: `Una propiedad imponente de 2 plantas con una distribución perfecta:\n\n• Planta Baja: Jardín, portal, garaje cerrado y carport para 2 carros, sala recibidor, cocina, comedor, 2 habitaciones, 3 baños, patio con ranchón y piscina.\n• Segunda Planta: 4 habitaciones y 4 baños.\n\nContando con respaldo energético, es la inversión perfecta para hogar o negocio de renta vacacional ya que es llegar y vivirla.`,
+    features: ['Piscina', 'Ranchón', 'Garaje cerrado + Carport', 'Jardín', 'Respaldo energético', 'Patio amplio'],
     images: [
       '/properties/casa-1/first.jpg',
       '/properties/casa-1/1387.jpg',
@@ -41,21 +41,21 @@ export const MOCK_PROPERTIES: Property[] = [
   },
   {
     id: 'casa-2',
-    title: 'Espectacular Residencia Estilo Años 50 en Miramar',
-    slug: 'espectacular-residencia-estilo-anos-50-miramar',
+    title: 'Mansión Autosuficiente con 28 Paneles Solares en Miramar',
+    slug: 'mansion-autosuficiente-28-paneles-solares-miramar',
     operation: 'Venta',
     zone: 'Miramar',
     address: 'Miramar, La Habana',
     price: 2500000,
     hidePrice: false,
     currency: 'USD',
-    bedrooms: 8, // 7 cuartos y medio
+    bedrooms: 8,
     bathrooms: 8,
     area: 850,
     parking: 4,
     propertyType: 'Mansión',
-    description: `Magnífica y exclusiva casa de dos niveles situada en el corazón de Miramar, una de las zonas residenciales más cotizadas y prestigiosas de La Habana.\n\n• Planta Baja: Jardín frontal, recibidor, amplia sala principal, saleta independiente, oficina privada, gran patio tropical con piscina privada y garaje techado para 4 carros.\n• Planta Alta: 7 habitaciones y media con 8 baños distribuidos estratégicamente.\n• Respaldo Energético Avanzado: Sistema fotovoltaico con 28 paneles solares, planta diésel de respaldo y planta de gasolina adicional.\n\nIdeal tanto para residencia de alto standing, embajadas, sede corporativa como para proyecto turístico boutique de máxima categoría.`,
-    features: ['28 Paneles Solares', 'Planta Diésel + Gasolina', 'Piscina Privada', 'Garaje 4 Autos', 'Despacho/Oficina', 'Zona Diplomática'],
+    description: `Magnífica y exclusiva casa situada en el corazón de Miramar, una de las zonas residenciales más cotizadas y prestigiosas de La Habana.\n\n• Respaldo Energético Avanzado: Sistema fotovoltaico con 28 paneles solares, planta diésel de respaldo y planta de gasolina adicional.\n• Áreas Exteriores: Gran patio tropical con piscina privada y garaje para 4 carros.\n• Distribución: 8 habitaciones y 8 baños distribuidos estratégicamente.\n\nIdeal tanto para residencia de alto standing, embajadas o sede corporativa.`,
+    features: ['28 Paneles Solares', 'Planta Diésel + Gasolina', 'Piscina Privada', 'Garaje 4 Autos', 'Zona Diplomática', 'Máxima Seguridad'],
     images: [
       '/properties/casa-2/first.jpg',
       '/properties/casa-2/1980.jpg',
@@ -99,7 +99,7 @@ export const MOCK_PROPERTIES: Property[] = [
     area: 600,
     parking: 2,
     propertyType: 'Casa',
-    description: `Una propiedad de 2 plantas que combina amplitud, seguridad y exclusividad:\n\n• 3 habitaciones + 1 cuarto de servicio\n• 3 baños\n• 2 cocinas (una exterior y otra interior)\n• 2 garajes, jardín y patio con gran amplitud y piscina.\n\nCuenta con respaldo de paneles solares, ¡se vende totalmente equipada con todo incluido! Una propiedad lista para la inversión de tu visión.`,
+    description: `Una propiedad de 2 plantas que combina amplitud, seguridad y exclusividad en Siboney:\n\n• 3 habitaciones + 1 cuarto de servicio\n• 3 baños\n• 2 cocinas (una interior y otra exterior)\n• 2 garajes, jardín y patio con gran amplitud y piscina.\n\nCuenta con respaldo de paneles solares y ¡se vende totalmente equipada con todo incluido! Una propiedad lista para la inversión de tu visión.`,
     features: ['Paneles Solares', 'Piscina', 'Totalmente equipada', '2 Cocinas', 'Garaje doble', 'Gran jardín'],
     images: [
       '/properties/casa-3/first.jpg',
@@ -124,21 +124,21 @@ export const MOCK_PROPERTIES: Property[] = [
   },
   {
     id: 'casa-4',
-    title: 'Elegante Residencia de Lujo de 1,104 m² en Kohly',
-    slug: 'elegante-residencia-de-lujo-kohly',
+    title: 'Casa Independiente con Terreno de 3,000 m² en Siboney',
+    slug: 'casa-independiente-terreno-3000m2-siboney',
     operation: 'Venta',
-    zone: 'Kohly',
-    address: 'Kohly, La Habana',
+    zone: 'Siboney',
+    address: 'Siboney, La Habana',
     price: 800000,
     hidePrice: false,
     currency: 'USD',
-    bedrooms: 6,
-    bathrooms: 7,
-    area: 1104,
+    bedrooms: 4,
+    bathrooms: 4,
+    area: 3000,
     parking: 2,
-    propertyType: 'Mansión',
-    description: `Elegancia, Amplitud y Confort en una de las zonas más privilegiadas de la ciudad.\n\nUbicada en el entorno tranquilo y arbolado de Kohly, esta imponente propiedad de 1,104.80 m² destaca por su arquitectura sólida, sus espacios abiertos y una distribución versátil:\n\n• Planta Baja: Jardín perimetral, portal generoso, garaje cerrado para 2 autos, hall de recibo, amplia sala, comedor independiente, 3 terrazas techadas, patio exterior pavimentado, 2 habitaciones de servicio y 3 baños.\n• Planta Alta: Recibidor privado, 4 dormitorios amplios (incluyendo vestidor clóset), 4 baños completos y 2 terrazas privadas con vistas despejadas.\n\nIdeal para residencia familiar de alto estándar, sede diplomática o negocio de lujo. Seguridad y discreción absoluta.`,
-    features: ['Terreno de 1,104 m²', 'Ideal Embajada / Diplomáticos', '3 Terrazas techadas', 'Vestidor Clóset', 'Garaje cerrado 2 autos', 'Seguridad absoluta'],
+    propertyType: 'Casa',
+    description: `Una propiedad de gran potencial cuyo mayor atractivo es un increíble terreno de 3,000 m² lleno de árboles frutales y naturaleza:\n\n• Distribución: Jardín, garaje doble, recibidor, cocina-comedor amplio, hall, 4 habitaciones y 4 baños.\n• Áreas de recreación: Terraza de descanso, patio, piscina y un hermoso ranchón con bar.\n\nPrivacidad y frescura natural garantizadas en una de las mejores zonas de Siboney.`,
+    features: ['Terreno 3,000 m²', 'Árboles frutales', 'Piscina', 'Ranchón con bar', 'Garaje doble', 'Terraza de descanso'],
     images: [
       '/properties/casa-4/first.jpg',
       '/properties/casa-4/1636.jpg',
@@ -153,21 +153,21 @@ export const MOCK_PROPERTIES: Property[] = [
   },
   {
     id: 'casa-5',
-    title: 'Residencia Diplomática con Piscina en Playa',
-    slug: 'residencia-diplomatica-con-piscina-playa',
+    title: 'Elegante Residencia de Lujo de 1,104 m² en Kohly',
+    slug: 'elegante-residencia-de-lujo-kohly',
     operation: 'Venta',
-    zone: 'Playa',
-    address: 'Playa, La Habana',
-    price: 950000,
+    zone: 'Kohly',
+    address: 'Kohly, La Habana',
+    price: 800000,
     hidePrice: false,
     currency: 'USD',
     bedrooms: 6,
     bathrooms: 7,
-    area: 520,
+    area: 1104,
     parking: 2,
-    propertyType: 'Villa',
-    description: `Propiedad de 2 Plantas en Playa, La Habana.\n\n• Planta baja: Jardín, portal, garaje cerrado y carport para 2 autos, sala recibidor, cocina, comedor, 2 habitaciones, 3 baños, patio con ranchón y piscina.\n• Segunda Planta: 4 habitaciones y 4 baños.\n\nPropiedad imponente con todas las comodidades, contando con respaldo energético. La inversión perfecta para hogar de alto nivel o negocio de renta.`,
-    features: ['Piscina', 'Ranchón', 'Respaldo energético', 'Garaje cerrado', 'Jardín', 'Planta eléctrica'],
+    propertyType: 'Mansión',
+    description: `Elegancia, Amplitud y Confort en una de las zonas más privilegiadas de la ciudad.\n\nUbicada en el entorno tranquilo y arbolado de Kohly, esta imponente propiedad de 1,104.80 m² destaca por su arquitectura sólida, sus espacios abiertos y una distribución versátil:\n\n• Planta Baja: Jardín perimetral, portal de generosas dimensiones, garaje cerrado para 2 autos con parqueo adicional, hall de recibo, amplia sala, comedor independiente, 3 terrazas techadas, patio exterior pavimentado y zona de servicio (2 habitaciones, 3 baños, local auxiliar y cuarto de lavado).\n• Planta Alta: Recibidor privado, 4 dormitorios amplios (incluyendo vestidor clóset), 4 baños completos y 2 terrazas privadas con vistas despejadas a Kohly.\n\nIdeal para residencia familiar de alto estándar, sede diplomática o negocio de lujo. Seguridad y discreción absoluta.`,
+    features: ['Superficie 1,104.80 m²', 'Ideal Sede Diplomática', '5 Terrazas', 'Vestidor Clóset', 'Garaje cerrado 2 autos', 'Seguridad absoluta'],
     images: [
       '/properties/casa-5/first.jpg',
       '/properties/casa-5/1893.jpg',
@@ -225,3 +225,6 @@ export const MOCK_PROPERTIES: Property[] = [
     whatsapp: '5352365254',
   },
 ];
+
+// Exportación alternativa para evitar errores de importación en otros componentes
+export const MOCK_PROPERTIES = mockProperties;
