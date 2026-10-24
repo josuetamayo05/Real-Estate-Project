@@ -13,7 +13,7 @@ export function Navbar() {
           <img
             src="/logo.png"
             alt="Marianne Houses"
-            className="h-14 sm:h-16 md:h-20 w-auto object-contain mix-blend-lighten"
+            className="h-20 sm:h-16 md:h-20 w-auto object-contain mix-blend-lighten"
           />
         </a>
 
