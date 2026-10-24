@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bed, Bath, MessageCircle } from 'lucide-react';
 import type { Property } from '../../types';
