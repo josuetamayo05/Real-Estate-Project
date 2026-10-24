@@ -19,17 +19,23 @@ export function FilterBar() {
   };
 
   return (
-    <section className="relative z-20 max-w-5xl mx-auto px-4 -mt-12 sm:-mt-10 mb-16">
-      <div className="bg-white rounded-xl shadow-2xl p-4 sm:p-6 border border-gray-100">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+    <section className="relative z-20 max-w-5xl mx-auto px-3 sm:px-6 -mt-10 sm:-mt-12 mb-12">
+      <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 border border-gray-100">
+        
+        {/* grid-cols-2 en móviles para que se acomoden limpios como en el diseño de referencia */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 items-end">
           
           {/* Operación */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1">Filter</label>
+            <label className="block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1">
+              Filter
+            </label>
             <select 
               value={operation}
-              onChange={(e) => setOperation(e.target.value)}
-              className="w-full h-11 bg-white border border-gray-300 rounded-lg px-3 text-xs font-medium text-gray-800 focus:outline-none focus:border-[#C9A961]"
+              onChange={(e) => {
+                setOperation(e.target.value);
+              }}
+              className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
               <option value="Venta/Renta">Venta/Renta</option>
               <option value="Venta">Venta</option>
@@ -39,11 +45,15 @@ export function FilterBar() {
 
           {/* Zona */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1">Zona</label>
+            <label className="block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1">
+              Zona
+            </label>
             <select 
               value={zone}
-              onChange={(e) => setZone(e.target.value)}
-              className="w-full h-11 bg-white border border-gray-300 rounded-lg px-3 text-xs font-medium text-gray-800 focus:outline-none focus:border-[#C9A961]"
+              onChange={(e) => {
+                setZone(e.target.value);
+              }}
+              className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
               <option value="Kohly/Siboney">Kohly/Siboney</option>
               <option value="Kohly">Kohly</option>
@@ -56,11 +66,15 @@ export function FilterBar() {
 
           {/* Habitaciones */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1">Habitaciones</label>
+            <label className="block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1">
+              Habitaciones
+            </label>
             <select 
               value={bedrooms}
-              onChange={(e) => setBedrooms(e.target.value)}
-              className="w-full h-11 bg-white border border-gray-300 rounded-lg px-3 text-xs font-medium text-gray-800 focus:outline-none focus:border-[#C9A961]"
+              onChange={(e) => {
+                setBedrooms(e.target.value);
+              }}
+              className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
               <option value="1">1</option>
               <option value="2">2</option>
@@ -70,11 +84,15 @@ export function FilterBar() {
             </select>
           </div>
 
-          {/* Precio Slider */}
-          <div>
+          {/* Precio Slider (Toma 2 columnas en móviles para alineación perfecta) */}
+          <div className="col-span-2 md:col-span-1 mt-1 md:mt-0">
             <div className="flex justify-between items-center mb-1">
-              <label className="text-[11px] font-bold uppercase tracking-wider text-gray-700">Precio :</label>
-              <span className="text-[11px] font-bold text-gray-800">${price.toLocaleString().replace(/,/g, '-')}</span>
+              <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gray-700">
+                Precio :
+              </label>
+              <span className="text-[11px] font-bold text-gray-900">
+                ${price.toLocaleString()}
+              </span>
             </div>
             <input 
               type="range" 
@@ -82,11 +100,10 @@ export function FilterBar() {
               max="2000000" 
               step="50000"
               value={price}
-              onChange={(e) => {
-                setPrice(Number(e.target.value));
-                handleFilter();
-              }}
-              className="w-full h-2 bg-gradient-to-r from-[#C9A961] to-gray-200 rounded-lg appearance-none cursor-pointer"
+              onChange={(e) => setPrice(Number(e.target.value))}
+              onMouseUp={handleFilter}
+              onTouchEnd={handleFilter}
+              className="w-full h-2 bg-gray-200 accent-[#C9A961] rounded-lg cursor-pointer"
             />
           </div>
 

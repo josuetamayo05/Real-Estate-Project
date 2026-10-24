@@ -10,11 +10,12 @@ export function Navbar() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-[#0A0A0A]/95 backdrop-blur-md text-white fixed top-0 left-0 right-0 z-50 border-b border-[#C9A961]/20">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <nav className="bg-[#0A0A0A] text-white fixed top-0 left-0 right-0 z-50 border-b border-[#C9A961]/20">
+      {/* Aumentamos el padding e h-24 en móvil para dar espacio al logo grande */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
         
         <a href="/" className="flex items-center">
-          <Logo className="h-12 sm:h-20 w-auto" />
+          <Logo className="h-14 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-300" />
         </a>
 
         {/* Menú Desktop */}
