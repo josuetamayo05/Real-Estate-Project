@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom';
 export function FilterBar() {
   const navigate = useNavigate();
   const [operation, setOperation] = useState('Venta/Renta');
-  const [zone, setZone] = useState('Kohly/Siboney');
+  const [zone, setZone] = useState('Todas');
   const [bedrooms, setBedrooms] = useState('3');
   const [price, setPrice] = useState(1000000);
 
   const handleFilter = () => {
     const params = new URLSearchParams();
     if (operation !== 'Venta/Renta') params.set('operacion', operation);
-    if (zone !== 'Kohly/Siboney') params.set('zona', zone);
+    if (zone !== 'Todas') params.set('zona', zone);
     if (bedrooms) params.set('habitaciones', bedrooms);
     if (price < 2000000) params.set('precioMax', price.toString());
 
@@ -19,7 +19,6 @@ export function FilterBar() {
   };
 
   return (
-    /* CAMBIO CLAVE: Se quita el -mt-10 / -mt-12 para que no tape la imagen superior */
     <section className="relative z-20 max-w-5xl mx-auto px-3 sm:px-6 py-6 mb-12">
       <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 border border-gray-100">
         
@@ -51,11 +50,13 @@ export function FilterBar() {
               onChange={(e) => setZone(e.target.value)}
               className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
-              <option value="Kohly/Siboney">Kohly/Siboney</option>
+              <option value="Todas">Todas las zonas</option>
+              <option value="Miramar">Miramar</option>
               <option value="Kohly">Kohly</option>
               <option value="Siboney">Siboney</option>
+
+              <option value="Santa Fe">Santa Fe</option>
               <option value="Vedado">Vedado</option>
-              <option value="Miramar">Miramar</option>
               <option value="Atabey">Atabey</option>
             </select>
           </div>
@@ -91,7 +92,7 @@ export function FilterBar() {
             <input 
               type="range" 
               min="100000" 
-              max="2000000" 
+              max="2500000" 
               step="50000"
               value={price}
               onChange={(e) => setPrice(Number(e.target.value))}

@@ -7,23 +7,20 @@ interface PropertyCardProps {
 }
 
 export function PropertyCard({ property }: PropertyCardProps) {
-  // Formatear el precio como en la maqueta: $450,000 USD
-  
-
   const mainImage = property.images && property.images.length > 0
     ? property.images[0]
     : 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80';
 
-    const defaultWhatsappMessage = encodeURIComponent(
-    `Hola, estoy interesado en la propiedad: "${property.title}"`
-  );
-
+  // Mostrar solo la cifra sin USD o "Consultar Precio"
   const priceDisplay = property.hidePrice || !property.price || property.price === 0
     ? 'Consultar Precio'
-    : `$${property.price.toLocaleString()} USD`;
+    : `$${property.price.toLocaleString()}`;
 
-  
-  const whatsappNumber = property.whatsapp || "5350000000";
+  const defaultWhatsappMessage = encodeURIComponent(
+    `Hola Marianne Houses, estoy interesado en la propiedad: "${property.title}" (Ref: ${property.slug || property.id})`
+  );
+
+  const whatsappNumber = property.whatsapp || "5352365254";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${defaultWhatsappMessage}`;
 
   return (
@@ -40,16 +37,19 @@ export function PropertyCard({ property }: PropertyCardProps) {
             alt={property.title} 
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
             loading="lazy"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80';
+            }}
           />
         </div>
 
-        {/* 2. INFORMACIÓN PRINCIPAL (Precio grande y Zona en Mayúsculas) */}
+        {/* 2. INFORMACIÓN PRINCIPAL (Solo Cifra y Zona Dinámica en Mayúsculas) */}
         <div className="p-4 sm:p-5 text-center">
           <h3 className="text-xl sm:text-2xl font-extrabold text-[#1A1A1A] tracking-tight mb-1">
-            {priceDisplay} <span className="text-xs font-normal text-gray-500">USD</span>
+            {priceDisplay}
           </h3>
           <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">
-            INDEPENDIENTE {property.zone || 'KOHLY'}
+            {property.zone ? property.zone.toUpperCase() : 'LA HABANA'}
           </p>
 
           {/* 3. BARRA DE ICONOS CENTRADOS (Habitaciones / Baños) */}
@@ -66,7 +66,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
         </div>
       </div>
 
-      {/* 4. BOTONES DE ACCIÓN INFERIORES ("VER DETALLES" Y "WHATSAPP") */}
+      {/* 4. BOTONES DE ACCIÓN INFERIORES */}
       <div className="p-4 pt-0 grid grid-cols-2 gap-2">
         <Link
           to={`/propiedad/${property.slug || property.id}`}
