@@ -8,19 +8,20 @@ interface PropertyCardProps {
 
 export function PropertyCard({ property }: PropertyCardProps) {
   // Formatear el precio como en la maqueta: $450,000 USD
-  const formattedPrice = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(property.price);
+  
 
   const mainImage = property.images && property.images.length > 0
     ? property.images[0]
     : 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80';
 
-  const defaultWhatsappMessage = encodeURIComponent(
+    const defaultWhatsappMessage = encodeURIComponent(
     `Hola, estoy interesado en la propiedad: "${property.title}"`
   );
+
+  const priceDisplay = property.hidePrice || !property.price || property.price === 0
+    ? 'Consultar Precio'
+    : `$${property.price.toLocaleString()} USD`;
+
   
   const whatsappNumber = property.whatsapp || "5350000000";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${defaultWhatsappMessage}`;
@@ -45,7 +46,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
         {/* 2. INFORMACIÓN PRINCIPAL (Precio grande y Zona en Mayúsculas) */}
         <div className="p-4 sm:p-5 text-center">
           <h3 className="text-xl sm:text-2xl font-extrabold text-[#1A1A1A] tracking-tight mb-1">
-            {formattedPrice} <span className="text-xs font-normal text-gray-500">USD</span>
+            {priceDisplay} <span className="text-xs font-normal text-gray-500">USD</span>
           </h3>
           <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">
             INDEPENDIENTE {property.zone || 'KOHLY'}

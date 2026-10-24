@@ -9,6 +9,7 @@ export interface Property {
   zone: string;
   address?: string;
   price: number;
+  hidePrice?: boolean; // Para clientes que prefieren "Consultar Precio"
   currency: 'USD';
   bedrooms: number;
   bathrooms: number;
