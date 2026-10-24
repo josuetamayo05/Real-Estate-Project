@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function Hero() {
   return (
     <header id="inicio" className="relative w-full bg-black pt-20 overflow-hidden">
@@ -5,9 +7,9 @@ export function Hero() {
       {/* CONTENEDOR CON LA PROPORCIÓN EXACTA DE LA IMAGEN */}
       <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] max-h-[85vh] flex items-center justify-center">
         
-        {/* IMAGEN DE FONDO (Mantiene su proporción sin estirarse ni deformarse) */}
+        {/* IMAGEN DE FONDO */}
         <img 
-          src="/home.jpeg" // o la ruta de tu imagen de la casa moderna
+          src="/home.jpeg"
           alt="Marianne Houses" 
           className="absolute inset-0 w-full h-full object-contain sm:object-cover object-center opacity-50"
         />
@@ -26,12 +28,12 @@ export function Hero() {
             Marianne Houses: Su experto en residencias independientes de alto nivel.
           </p>
 
-          <a 
-            href="#propiedades"
-            className="inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3.5 bg-gradient-to-r from-[#C9A961] to-[#b89750] hover:from-[#b89750] hover:to-[#a78640] text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest rounded-md shadow-xl transition-all"
+          <Link 
+            to="/propiedades"
+            className="inline-flex items-center justify-center px-6 py-2.5 sm:px-8 sm:py-3.5 bg-gradient-to-r from-[#C9A961] to-[#b89750] hover:from-[#b89750] hover:to-[#a78640] text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest rounded-md shadow-xl transition-all hover:scale-105"
           >
             VER PROPIEDADES
-          </a>
+          </Link>
         </div>
 
       </div>

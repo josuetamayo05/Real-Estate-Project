@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/layout/ScrollToTop';
 import { Home } from './pages/Home';
 import { Properties } from './pages/Properties';
 import { PropertyDetail } from './pages/PropertyDetail';
@@ -14,6 +15,7 @@ import { WhatsAppButton } from './components/common/WhatsAppButton';
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <WhatsAppButton phoneNumber="5352365254" />
 
       <Routes>
