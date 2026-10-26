@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ALL_HAVANA_ZONES } from '../../data/zones';
 
 export function FilterBar() {
   const navigate = useNavigate();
@@ -51,13 +52,9 @@ export function FilterBar() {
               className="w-full h-10 sm:h-11 bg-white border border-gray-200 rounded-lg px-2.5 text-xs font-semibold text-gray-800 focus:outline-none focus:border-[#C9A961] shadow-sm"
             >
               <option value="Todas">Todas las zonas</option>
-              <option value="Miramar">Miramar</option>
-              <option value="Kohly">Kohly</option>
-              <option value="Siboney">Siboney</option>
-
-              <option value="Santa Fe">Santa Fe</option>
-              <option value="Vedado">Vedado</option>
-              <option value="Atabey">Atabey</option>
+              {ALL_HAVANA_ZONES.map((availableZone) => (
+                <option key={availableZone} value={availableZone}>{availableZone}</option>
+              ))}
             </select>
           </div>
 

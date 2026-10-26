@@ -4,6 +4,7 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { PropertyCard } from '../components/property/PropertyCard';
 import { MOCK_PROPERTIES } from '../data/mockProperties';
+import { ALL_HAVANA_ZONES } from '../data/zones';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -75,11 +76,9 @@ export function Properties() {
               className="w-full h-9 bg-gray-50 border border-gray-200 rounded text-xs px-2 focus:outline-none focus:border-[#C9A961]"
             >
               <option value="">Todas las zonas</option>
-              <option value="Kohly">Kohly</option>
-              <option value="Siboney">Siboney</option>
-              <option value="Miramar">Miramar</option>
-              <option value="Vedado">Vedado</option>
-              <option value="Atabey">Atabey</option>
+              {ALL_HAVANA_ZONES.map((availableZone) => (
+                <option key={availableZone} value={availableZone}>{availableZone}</option>
+              ))}
             </select>
           </div>
 
