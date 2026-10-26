@@ -57,6 +57,7 @@ export const mockProperties: Property[] = [
     description: `Magnífica y exclusiva casa situada en el corazón de Miramar, una de las zonas residenciales más cotizadas y prestigiosas de La Habana.\n\n• Respaldo Energético Avanzado: Sistema fotovoltaico con 28 paneles solares, planta diésel de respaldo y planta de gasolina adicional.\n• Áreas Exteriores: Gran patio tropical con piscina privada y garaje para 4 carros.\n• Distribución: 8 habitaciones y 8 baños distribuidos estratégicamente.\n\nIdeal tanto para residencia de alto standing, embajadas o sede corporativa.`,
     features: ['28 Paneles Solares', 'Planta Diésel + Gasolina', 'Piscina Privada', 'Garaje 4 Autos', 'Zona Diplomática', 'Máxima Seguridad'],
     images: [
+      '/properties/casa-2/first.jpg',
       '/properties/casa-2/1980.jpg',
       '/properties/casa-2/1981.jpg',
       '/properties/casa-2/1982.jpg',
@@ -75,7 +76,6 @@ export const mockProperties: Property[] = [
       '/properties/casa-2/2008.jpg',
       '/properties/casa-2/2010.jpg',
       '/properties/casa-2/2015.jpg',
-      '/properties/casa-2/2018.jpg',
       '/properties/casa-2/2021.jpg',
       '/properties/casa-2/2022.jpg',
       '/properties/casa-2/2029.jpg'
@@ -166,7 +166,7 @@ export const mockProperties: Property[] = [
     area: 1104,
     parking: 2,
     propertyType: 'Mansión',
-    description: `Elegancia, Amplitud y Confort en una de las zonas más privilegiadas de la ciudad.\n\nUbicada en el entorno tranquilo y arbolado de Kohly, esta imponente propiedad de 1,104.80 m² destaca por su arquitectura sólida, sus espacios abiertos y una distribución versátil:\n\n• Planta Baja: Jardín perimetral, portal de generosas dimensiones, garaje cerrado para 2 autos con parqueo adicional, hall de recibo, amplia sala, comedor independiente, 3 terrazas techadas, patio exterior pavimentado y zona de servicio (2 habitaciones, 3 baños, local auxiliar y cuarto de lavado).\n• Planta Alta: Recibidor privado, 4 dormitorios amplios (incluyendo vestidor clóset), 4 baños completos y 2 terrazas privadas con vistas despejadas a Kohly.\n\nIdeal para residencia familiar de alto estándar, sede diplomática o negocio de lujo. Seguridad y discreción absoluta.`,
+    description: `Elegancia, Amplitud y Confort en una de las zonas más privilegedas de la ciudad.\n\nUbicada en el entorno tranquilo y arbolado de Kohly, esta imponente propiedad de 1,104.80 m² destaca por su arquitectura sólida, sus espacios abiertos y una distribución versátil:\n\n• Planta Baja: Jardín perimetral, portal de generosas dimensiones, garaje cerrado para 2 autos con parqueo adicional, hall de recibo, amplia sala, comedor independiente, 3 terrazas techadas, patio exterior pavimentado y zona de servicio (2 habitaciones, 3 baños, local auxiliar y cuarto de lavado).\n• Planta Alta: Recibidor privado, 4 dormitorios amplios (incluyendo vestidor clóset), 4 baños completos y 2 terrazas privadas con vistas despejadas a Kohly.\n\nIdeal para residencia familiar de alto estándar, sede diplomática o negocio de lujo. Seguridad y discreción absoluta.`,
     features: ['Superficie 1,104.80 m²', 'Ideal Sede Diplomática', '5 Terrazas', 'Vestidor Clóset', 'Garaje cerrado 2 autos', 'Seguridad absoluta'],
     images: [
       '/properties/casa-5/first.jpg',
