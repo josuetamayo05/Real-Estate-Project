@@ -254,7 +254,40 @@ export const mockProperties: Property[] = [
     featured: false,
     sold: false,
     whatsapp: '5352365254',
+  },
+  {
+    id: 'casa-8',
+    title: 'Propiedad Independiente con Paneles Solares en Playa',
+    slug: 'propiedad-independiente-paneles-solares-playa',
+    operation: 'Venta',
+    zone: 'Playa',
+    address: 'Playa, La Habana',
+    price: 150000,
+    hidePrice: false,
+    currency: 'USD',
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 250,
+    parking: 1,
+    propertyType: 'Casa',
+    description: `Excelente propiedad independiente en Playa, La Habana:\n\n• Distribución: Jardín frontal, garaje, sala espaciosa, cocina, comedor, 3 habitaciones confortables, 2 baños y patio.\n• Respaldo Energético: Incluye sistema de paneles solares con inversores instalados para total autonomía.\n• Equipamiento: Se entrega con mobiliario incluido, lista para habitar.`,
+    features: ['Paneles Solares con Inversores', 'Mobiliario Incluido', 'Jardín', 'Garaje', 'Patio'],
+    images: [
+      '/properties/casa-8/first.jpg',
+      '/properties/casa-8/2196.jpg',
+      '/properties/casa-8/2197.jpg',
+      '/properties/casa-8/2025.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793206017/properties/casa-8/yxauwfjerkzpjkneemzm.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793206913/properties/casa-8/qhm1rbjei69kls57fvrz.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793206453/properties/casa-8/tkauwjiscid7elymyc16.jpg',
+      '/properties/casa-8/7636.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793206447/properties/casa-8/auvjzw3gf1fkfihjr8nz.jpg'
+    ],
+    featured: false,
+    sold: false,
+    whatsapp: '5352365254',
   }
 ];
 
 export const MOCK_PROPERTIES = mockProperties;
+
