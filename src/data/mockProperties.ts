@@ -223,6 +223,37 @@ export const mockProperties: Property[] = [
     featured: true,
     sold: false,
     whatsapp: '5352365254',
+  },
+  {
+    id: 'casa-7',
+    title: 'Exclusivo Apartamento Capitalista en Venta en Miramar',
+    slug: 'exclusivo-apartamento-capitalista-miramar',
+    operation: 'Venta',
+    zone: 'Miramar',
+    address: 'Miramar, La Habana',
+    price: 230000,
+    hidePrice: false,
+    currency: 'USD',
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 280,
+    parking: 4,
+    propertyType: 'Apartamento',
+    description: `Una joya arquitectónica de estilo capitalista ubicada en la 2ª y última planta de una edificación exclusiva de solo dos niveles en Miramar:\n\n• Distribución: Elegante salón y comedor independientes, cocina funcional de gran tamaño, 3 dormitorios amplios + walk-in closet independiente y 2 baños completos con agua fría/caliente.\n• Exteriores Privados: Hermosa terraza, patio cementado y patio de tierra para esparcimiento.\n• Garaje y Servicio: Estacionamiento privado con capacidad para 4 autos con acceso directo desde la calle, más una habitación de servicio independiente con baño sobre los garajes.\n• Servicios y Acabados: 2 cisternas propias, tanque elevado, hermosos pisos de granito original y jardín delantero con escalera privada.\n\nSe vende completamente amueblado, listo para habitar o rentar desde el primer día.`,
+    features: ['Totalmente Amueblado', 'Garaje para 4 Autos', 'Habitación de Servicio Independiente', 'Terraza y Patio amplio', '2 Cisternas Propias', 'Pisos de Granito Original'],
+    images: [
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198496/properties/casa-7/n69wishdbs8n2rdlmnm2.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198433/properties/casa-7/uh39bdnzh8vctgiki8e5.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198465/properties/casa-7/jpcmupkesfgqa4yj3vy3.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198569/properties/casa-7/sxr120dz9pjbcosbvsht.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198523/properties/casa-7/gedebvnzvmhpmqnc420m.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198475/properties/casa-7/wvzlmygqpk4hqynp2xdh.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198530/properties/casa-7/osppr5f4yy8zlr3ebhlf.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793198482/properties/casa-7/ckmxhrfufeukyeiddopc.jpg'
+    ],
+    featured: false,
+    sold: false,
+    whatsapp: '5352365254',
   }
 ];
 
