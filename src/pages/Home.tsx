@@ -7,16 +7,14 @@ import { SEO } from '../components/seo/SEO';
 
 export function Home() {
   return (
-    
     <div className="bg-[#F8F8F8] min-h-screen font-sans text-[#1A1A1A] antialiased">
-      <SEO/>
+      <SEO />
       <Navbar />
       <Hero />
       <FilterBar />
       <FeaturedProperties />
 
-
-      {/* SOBRE NOSOTROS Y CONTACTO DIRECTO (Réplica exacta de la maqueta) */}
+      {/* SOBRE NOSOTROS Y CONTACTO DIRECTO */}
       <section id="nosotros" className="max-w-6xl mx-auto px-4 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 shadow-sm">
           
