@@ -3,12 +3,13 @@ import { Footer } from '../components/layout/Footer';
 import { Hero } from '../components/home/Hero';
 import { FilterBar } from '../components/home/FilterBar';
 import { FeaturedProperties } from '../components/home/FeaturedProperties';
-//import { seedPropertiesToFirestore } from '../services/propertyService';
+import { SEO } from '../components/seo/SEO';
 
 export function Home() {
   return (
     
     <div className="bg-[#F8F8F8] min-h-screen font-sans text-[#1A1A1A] antialiased">
+      <SEO/>
       <Navbar />
       <Hero />
       <FilterBar />
@@ -75,18 +76,6 @@ export function Home() {
 
         </div>
       </section>
-
-      
-      {/* Botón temporal de sincronización con Firestore */}
-      {/* <div className="py-6 text-center bg-gray-200">
-        <button 
-          onClick={seedPropertiesToFirestore}
-          className="px-6 py-3 bg-black text-[#C9A961] font-bold text-xs rounded uppercase tracking-widest hover:bg-gray-800 transition-all shadow-md"
-        >
-          🔥 Sincronizar nuevo catálogo a Firestore
-        </button>
-      </div> */}
-
       <Footer />
     </div>
   );

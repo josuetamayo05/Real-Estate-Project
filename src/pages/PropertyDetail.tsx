@@ -1,8 +1,18 @@
-import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Bath, Bed, Maximize2, Car, MapPin, MessageCircle, Check, ArrowLeft } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import {
+  ArrowLeft,
+  Bath,
+  Bed,
+  Car,
+  Check,
+  MapPin,
+  Maximize2,
+  MessageCircle,
+} from 'lucide-react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
+import { SEO } from '../components/seo/SEO';
 import { getPropertyBySlug } from '../services/propertyService';
 import type { Property } from '../types';
 
@@ -13,20 +23,29 @@ export function PropertyDetail() {
   const [selectedImg, setSelectedImg] = useState('');
 
   useEffect(() => {
+    let isMounted = true;
+
     if (slug) {
       getPropertyBySlug(slug).then((data) => {
+        if (!isMounted) return;
         setProperty(data);
         if (data?.images?.[0]) setSelectedImg(data.images[0]);
         setLoading(false);
       });
     }
+
+    return () => {
+      isMounted = false;
+    };
   }, [slug]);
 
   if (loading) {
     return (
       <div className="bg-[#F8F8F8] min-h-screen">
         <Navbar />
-        <div className="max-w-6xl mx-auto px-4 pt-32 text-center text-gray-500">Cargando propiedad...</div>
+        <div className="max-w-6xl mx-auto px-4 pt-32 text-center text-gray-500">
+          Cargando propiedad...
+        </div>
       </div>
     );
   }
@@ -37,23 +56,46 @@ export function PropertyDetail() {
         <Navbar />
         <div className="max-w-6xl mx-auto px-4 pt-32 text-center">
           <p className="text-lg font-bold">Propiedad no encontrada</p>
-          <Link to="/propiedades" className="text-xs text-[#C9A961] underline mt-2 inline-block">Volver al catálogo</Link>
+          <Link
+            to="/propiedades"
+            className="text-xs text-[#C9A961] underline mt-2 inline-block"
+          >
+            Volver al catálogo
+          </Link>
         </div>
       </div>
     );
   }
 
+  const whatsappNumber = (property.whatsapp || '5352365254').replace(/[^0-9]/g, '');
   const whatsappMessage = encodeURIComponent(
     `Hola, solicito más información sobre la propiedad: "${property.title}" (Ref: ${property.slug})`
   );
-  const whatsappUrl = `https://wa.me/${(property.whatsapp || '5350000000').replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const priceLabel =
+    property.hidePrice || !property.price
+      ? 'Consultar Precio'
+      : `$${property.price.toLocaleString()}`;
+
+  const coverImage = property.images?.[0] || '/og-image.jpg';
 
   return (
     <div className="bg-[#F8F8F8] min-h-screen font-sans text-[#1A1A1A]">
+      <SEO
+        title={property.title}
+        description={property.description?.slice(0, 160) || `Propiedad en ${property.zone}, La Habana.`}
+        image={coverImage}
+        url={`https://marianne-houses.vercel.app/propiedad/${property.slug}`}
+      />
+
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 pt-28 pb-20">
-        <Link to="/propiedades" className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#C9A961] mb-6 font-semibold uppercase tracking-wider">
+        <Link
+          to="/propiedades"
+          className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#C9A961] mb-6 font-semibold uppercase tracking-wider"
+        >
           <ArrowLeft className="w-4 h-4" /> Volver al catálogo
         </Link>
 
@@ -62,30 +104,41 @@ export function PropertyDetail() {
             <span className="bg-[#C9A961] text-black text-[10px] font-extrabold px-3 py-1 rounded uppercase tracking-wider shadow-sm inline-block mb-2">
               {property.operation}
             </span>
-            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#1A1A1A]">{property.title}</h1>
+            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#1A1A1A]">
+              {property.title}
+            </h1>
             <p className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-              <MapPin className="w-3.5 h-3.5 text-[#C9A961]" /> {property.address || property.zone}
+              <MapPin className="w-3.5 h-3.5 text-[#C9A961]" />
+              {property.address || property.zone}
             </p>
           </div>
           <div className="text-left md:text-right">
-            <p className="text-3xl font-extrabold text-[#C9A961]">${property.price.toLocaleString()} USD</p>
-            <p className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Zona {property.zone}</p>
+            <p className="text-3xl font-extrabold text-[#C9A961]">{priceLabel}</p>
+            <p className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">
+              Zona {property.zone}
+            </p>
           </div>
         </div>
 
         {/* Galería de Fotos */}
         <div className="space-y-3 mb-10">
           <div className="aspect-[16/9] md:aspect-[21/9] bg-gray-200 rounded-xl overflow-hidden shadow-md">
-            <img src={selectedImg || property.images[0]} alt={property.title} className="w-full h-full object-cover" />
+            <img
+              src={selectedImg || property.images[0]}
+              alt={property.title}
+              className="w-full h-full object-cover"
+            />
           </div>
           {property.images && property.images.length > 1 && (
             <div className="flex gap-3 overflow-x-auto pb-2">
               {property.images.map((img, idx) => (
-                <button 
-                  key={idx} 
+                <button
+                  key={idx}
                   onClick={() => setSelectedImg(img)}
                   className={`w-24 h-16 rounded-lg overflow-hidden border-2 flex-shrink-0 transition-all ${
-                    selectedImg === img ? 'border-[#C9A961] scale-105' : 'border-transparent opacity-70 hover:opacity-100'
+                    selectedImg === img
+                      ? 'border-[#C9A961] scale-105'
+                      : 'border-transparent opacity-70 hover:opacity-100'
                   }`}
                 >
                   <img src={img} alt="" className="w-full h-full object-cover" />
@@ -119,12 +172,16 @@ export function PropertyDetail() {
 
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-3">
               <h2 className="font-serif text-lg font-bold text-[#1A1A1A]">Descripción</h2>
-              <p className="text-gray-600 text-xs sm:text-sm font-light leading-relaxed">{property.description}</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-light leading-relaxed">
+                {property.description}
+              </p>
             </div>
 
             {property.features && property.features.length > 0 && (
               <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-3">
-                <h2 className="font-serif text-lg font-bold text-[#1A1A1A]">Amenidades y Características</h2>
+                <h2 className="font-serif text-lg font-bold text-[#1A1A1A]">
+                  Amenidades y Características
+                </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {property.features.map((feat) => (
                     <div key={feat} className="flex items-center gap-2 text-xs text-gray-700">
@@ -139,12 +196,14 @@ export function PropertyDetail() {
 
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4 sticky top-28">
-              <h3 className="font-bold text-xs uppercase tracking-wider text-gray-800">¿Interesado en esta propiedad?</h3>
+              <h3 className="font-bold text-xs uppercase tracking-wider text-gray-800">
+                ¿Interesado en esta propiedad?
+              </h3>
               <p className="text-xs text-gray-500 font-light leading-relaxed">
                 Contacte directamente a un asesor de Marianne Houses para agendar una visita privada.
               </p>
 
-              <a 
+              <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"

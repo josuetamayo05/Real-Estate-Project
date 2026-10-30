@@ -7,6 +7,7 @@ import { MOCK_PROPERTIES } from '../data/mockProperties';
 import { ALL_HAVANA_ZONES } from '../data/zones';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/seo/SEO';
 
 export function Properties() {
   const [searchParams] = useSearchParams();
@@ -28,6 +29,11 @@ export function Properties() {
 
   return (
     <div className="bg-[#F8F8F8] min-h-screen font-sans text-[#1A1A1A]">
+      <SEO
+        title="Catálogo de Propiedades"
+        description="Explore villas, mansiones y residencias de lujo en Miramar, Siboney, Kohly, Playa y más zonas de La Habana."
+        url="https://mariannehouses.com/propiedades"
+      />
       <Navbar />
 
       {/* BOTÓN VOLVER AL INICIO */}
