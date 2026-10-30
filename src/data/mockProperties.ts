@@ -321,6 +321,53 @@ export const mockProperties: Property[] = [
     featured: false,
     sold: false,
     whatsapp: '5352365254',
+  },
+  {
+    "id": "casa-10",
+    "title": "Residencia Exclusiva en Casa-10",
+    "slug": "residencia-exclusiva-casa-10",
+    "operation": "Venta",
+    "zone": "Kohly/Siboney",
+    "address": "La Habana, Cuba",
+    "price": 500000,
+    "hidePrice": false,
+    "currency": "USD",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "area": 450,
+    "parking": 2,
+    "propertyType": "Casa",
+    "description": "🌟 Espectacular Casa de 2 Plantas en Miramar con Vista al Mar\n​¿Buscas comodidad, amplitud y una ubicación privilegiada? Esta magnífica propiedad en Miramar lo tiene todo para convertirse en tu próximo hogar o en una excelente inversión. Diseñada para disfrutar al máximo de la vida en familia y del clima tropical.\n​🏡 Distribución de la Planta Baja\n•  ​Exterior y Accesos: Cuenta con un jardín amplio y bien cuidado, garaje privado y pasillos laterales anchos que facilitan la circulación y la independencia alrededor de la casa. \n•  ​Áreas Sociales: Acogedor portal, una luminosa sala ideal para recibir visitas y un cómodo comedor independiente. \n• ​Cocina: Funcional y lista para el día a día.\n•  ​2 habitaciones espaciosas \n•  2 baños completos. \n•  ​Servicios: Práctica habitación de lavado con cocina incorporada, perfecta para el área de servicio o labores de limpieza. \n•  ​Patio: Amplio área exterior con piso de patio de granito, duradero y de fácil mantenimiento. \n​🌅 La Segunda Planta \n•  3era habitación  equipada con su propio baño y un amplio cuarto vestidor \n•  ​Zona de Esparcimiento y Vistas:\n◦  ​Una hermosa terraza que ya cuenta con proyecto hecho, lista para personalizar o ampliar a tu gusto. \n◦  ​Un maravilloso mirador que regala unas vistas despejadas al mar, ideal para relajarse al atardecer. \n​💼 ¡Una oportunidad única en una de las zonas más cotizadas! Espacios versátiles, excelente iluminación natural y el toque especial del mar muy cerca de ti.\n\nPrecio 400 mil",
+    "features": [
+      "Piscina",
+      "Jardín",
+      "Garaje"
+    ],
+    "images": [
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395068/properties/casa-10/coeqbzjvxp2pxnqzc8x5.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395082/properties/casa-10/hyoagk4x7n4iyiir5n1d.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395058/properties/casa-10/wawlysohxzehwvshxd9d.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395071/properties/casa-10/fix9rp6ng0ncvmwjiktu.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395064/properties/casa-10/m4wjs0goahdqug3fxbtw.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395036/properties/casa-10/cc506fggfsnuaxvibicy.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395074/properties/casa-10/jmg3zrxmcawlfbis8zb7.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395038/properties/casa-10/qf3hzvrd3uwqxn2nwxib.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395047/properties/casa-10/td9yciiiv1qwpl50abod.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395019/properties/casa-10/gej7mhd8ykjllwzmbc1u.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395031/properties/casa-10/fphj9mmsfn0xllzjggxu.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395056/properties/casa-10/td2pn8fhle9umnmred5k.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395061/properties/casa-10/upoeykrxxh5lwuyrpnge.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395029/properties/casa-10/negwfxry2yx4fojfuydb.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395041/properties/casa-10/vnbagazl1lbbxxu6ngih.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395044/properties/casa-10/ifyvhyez5fnotevqzlsd.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395079/properties/casa-10/rqtj0mib9b0dob3i15p0.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395026/properties/casa-10/fmlaocnofmxyuu4lxilb.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395052/properties/casa-10/mr7zul5ofsq6pybbi8xi.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1793395050/properties/casa-10/c1ttg6c2zowjszu8uzwb.jpg'
+    ],
+    "featured": true,
+    "sold": false,
+    "whatsapp": "5352365254"
   }
 ];
 
