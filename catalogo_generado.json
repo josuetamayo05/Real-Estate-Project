@@ -1,8 +1,8 @@
 [
   {
-    "id": "casa-10",
-    "title": "Residencia Exclusiva en Casa-10",
-    "slug": "residencia-exclusiva-casa-10",
+    "id": "casa-11",
+    "title": "Residencia Exclusiva en Casa-11",
+    "slug": "residencia-exclusiva-casa-11",
     "operation": "Venta",
     "zone": "Kohly/Siboney",
     "address": "La Habana, Cuba",
@@ -14,13 +14,23 @@
     "area": 450,
     "parking": 2,
     "propertyType": "Casa",
-    "description": "Espectacular Residencia en Miramar – Exclusividad, Amplitud y Confort Total\n​Presentamos una magnífica propiedad de dos plantas ubicada en una de las zonas más cotizadas y residenciales de La Habana. Diseñada para quienes valoran el espacio, la comodidad y la independencia energética, esta residencia se entrega completamente amueblada, lista para habitar o para un proyecto de inversión \n​Distribución de los Espacios:\n•  ​Planta Baja:\n◦ ​Hermoso jardín frontal y portal de bienvenida.\n◦ ​Amplia sala principal y sala de estar independiente, ideales para el descanso y la recepción de visitas.\n◦  ​2 habitaciones espaciosas y 3 baños completos en la planta baja. \n•  ​Planta Alta:\n◦  ​4 habitaciones adicionales con 3 baños, ofreciendo máxima privacidad y confort para toda la familia o invitados. \n•  ​Exteriores y Comodidades:\n◦ ​Gran patio amplio, perfecto para el esparcimiento, la instalación de áreas recreativas o futuras ampliaciones.\n◦ ​Garaje privado con capacidad de estacionamiento.\n◦ ​Reparto energético independiente/optimizado y múltiples comodidades adicionales que garantizan el máximo bienestar.\n​Una oportunidad única de adquirir una residencia con dimensiones excepcionales, excelente iluminación natural y una ubicación privilegiada en Miramar.\n 500 mil",
+    "description": "Apartamento en Planta Baja – 📍El Vedado\n\n🔹️​Descubra la combinación perfecta de amplitud, elegancia y funcionalidad en el corazón del Vedado. Este apartamento en planta baja no es solo una propiedad, es un hogar diseñado para quienes valoran la independencia y el confort en una de las zonas más codiciadas de La Habana.\n🔹️​Características Principales\n🔹️​Espacios Exteriores y Seguridad:\n🔹️​Portal con Jardín: Un espacio acogedor y privado que ofrece una transición elegante entre la calle y la intimidad del hogar.\n🔹️​Carposh Doble: Capacidad techada para 2 vehículos, una comodidad excepcional y altamente demandada en esta zona.\n🔹️​Cisterna Propia: Garantía de autonomía y servicio de agua constante.\n🔹️​Distribución Social y Privada:\n🔹️​Áreas de Convivencia: Sala amplia, saleta independiente y un comedor formal, ideales para recibir visitas con total distinción.\n🔹️​Zona de Servicio: Cocina funcional conectada a un patio de lavado independiente.\n​Área de Descanso: Un hall distribuidor que brinda privacidad a los 3 dormitorios y 3 baños completos, asegurando comodidad para toda la familia o invitados.\n🫴🏻​Valores Añadidos de esta Propiedad\n​Privacidad de Casa, Comodidad de Apartamento: Al ser un bajo con entrada independiente, portal y jardín, ofrece la sensación de una casa autónoma con la practicidad de un apartamento.\n📍​Ubicación Estratégica: Situado en el Vedado, rodeado de servicios, centros culturales y vías principales, manteniendo la tranquilidad residencial.\n🔹️​Potencial de Inversión: Por su distribución (3 habitaciones y 3 baños), es una propiedad ideal tanto para residencia familiar de lujo como para un negocio de renta de alto estándar.\n🔹️​Autonomía Logística: La combinación de cisterna propia y garaje doble para dos autos resuelve dos de las mayores preocupaciones logísticas en la ciudad\n\n💵Precio: 140 mil",
     "features": [
       "Piscina",
       "Jardín",
       "Garaje"
     ],
-    "images": [],
+    "images": [
+      "/properties/casa-11/first.jpg",
+      "/properties/casa-11/1524.jpg",
+      "/properties/casa-11/1525.jpg",
+      "/properties/casa-11/1526.jpg",
+      "/properties/casa-11/1528.jpg",
+      "/properties/casa-11/1530.jpg",
+      "/properties/casa-11/1531.jpg",
+      "/properties/casa-11/1532.jpg",
+      "/properties/casa-11/1533.jpg"
+    ],
     "featured": true,
     "sold": false,
     "whatsapp": "5352365254"
