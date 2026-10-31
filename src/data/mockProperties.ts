@@ -324,8 +324,8 @@ export const mockProperties: Property[] = [
   },
   {
     "id": "casa-10",
-    "title": "Residencia Exclusiva en Casa-10",
-    "slug": "residencia-exclusiva-casa-10",
+    "title": "Residencia Exclusiva en Miramar ",
+    "slug": "residencia-exclusiva-en-miramar-",
     "operation": "Venta",
     "zone": "Kohly/Siboney",
     "address": "La Habana, Cuba",
@@ -337,7 +337,7 @@ export const mockProperties: Property[] = [
     "area": 450,
     "parking": 2,
     "propertyType": "Casa",
-    "description": "🌟 Espectacular Casa de 2 Plantas en Miramar con Vista al Mar\n​¿Buscas comodidad, amplitud y una ubicación privilegiada? Esta magnífica propiedad en Miramar lo tiene todo para convertirse en tu próximo hogar o en una excelente inversión. Diseñada para disfrutar al máximo de la vida en familia y del clima tropical.\n​🏡 Distribución de la Planta Baja\n•  ​Exterior y Accesos: Cuenta con un jardín amplio y bien cuidado, garaje privado y pasillos laterales anchos que facilitan la circulación y la independencia alrededor de la casa. \n•  ​Áreas Sociales: Acogedor portal, una luminosa sala ideal para recibir visitas y un cómodo comedor independiente. \n• ​Cocina: Funcional y lista para el día a día.\n•  ​2 habitaciones espaciosas \n•  2 baños completos. \n•  ​Servicios: Práctica habitación de lavado con cocina incorporada, perfecta para el área de servicio o labores de limpieza. \n•  ​Patio: Amplio área exterior con piso de patio de granito, duradero y de fácil mantenimiento. \n​🌅 La Segunda Planta \n•  3era habitación  equipada con su propio baño y un amplio cuarto vestidor \n•  ​Zona de Esparcimiento y Vistas:\n◦  ​Una hermosa terraza que ya cuenta con proyecto hecho, lista para personalizar o ampliar a tu gusto. \n◦  ​Un maravilloso mirador que regala unas vistas despejadas al mar, ideal para relajarse al atardecer. \n​💼 ¡Una oportunidad única en una de las zonas más cotizadas! Espacios versátiles, excelente iluminación natural y el toque especial del mar muy cerca de ti.\n\nPrecio 400 mil",
+    "description": "Espectacular Residencia en Miramar – Exclusividad, Amplitud y Confort Total\n​Presentamos una magnífica propiedad de dos plantas ubicada en una de las zonas más cotizadas y residenciales de La Habana. Diseñada para quienes valoran el espacio, la comodidad y la independencia energética, esta residencia se entrega completamente amueblada, lista para habitar o para un proyecto de inversión \n​Distribución de los Espacios:\n•  ​Planta Baja:\n◦ ​Hermoso jardín frontal y portal de bienvenida.\n◦ ​Amplia sala principal y sala de estar independiente, ideales para el descanso y la recepción de visitas.\n◦  ​2 habitaciones espaciosas y 3 baños completos en la planta baja. \n•  ​Planta Alta:\n◦  ​4 habitaciones adicionales con 3 baños, ofreciendo máxima privacidad y confort para toda la familia o invitados. \n•  ​Exteriores y Comodidades:\n◦ ​Gran patio amplio, perfecto para el esparcimiento, la instalación de áreas recreativas o futuras ampliaciones.\n◦ ​Garaje privado con capacidad de estacionamiento.\n◦ ​Reparto energético independiente/optimizado y múltiples comodidades adicionales que garantizan el máximo bienestar.\n​Una oportunidad única de adquirir una residencia con dimensiones excepcionales, excelente iluminación natural y una ubicación privilegiada en Miramar.\n 500 mil",
     "features": [
       "Piscina",
       "Jardín",
