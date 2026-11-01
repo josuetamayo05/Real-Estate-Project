@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import ScrollToTop from './components/layout/ScrollToTop';
 import { Home } from './pages/Home';
 import { Properties } from './pages/Properties';
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/nueva" element={<AdminPropertyEdit />} />
       </Routes>
+      <SpeedInsights />
     </BrowserRouter>
   );
 }
