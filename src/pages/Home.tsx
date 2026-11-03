@@ -5,6 +5,7 @@ import { FilterBar } from '../components/home/FilterBar';
 import { FeaturedProperties } from '../components/home/FeaturedProperties';
 import { SEO } from '../components/seo/SEO';
 
+
 export function Home() {
   return (
     <div className="bg-[#F8F8F8] min-h-screen font-sans text-[#1A1A1A] antialiased">
