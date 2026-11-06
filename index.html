@@ -1,21 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- FAVICON PARA GOOGLE Y NAVEGADORES -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A0A" />
 
-    {/* Favicon actualizado */}
-    <link rel="icon" type="image/png" href="/logo.png" />
-
-    {/* SEO y Open Graph base */}
-    <title>Marianne Houses | Agencia Inmobiliaria de Lujo en La Habana, Cuba</title>
+    <!-- TITULO Y DESCRIPCION POR DEFECTO -->
+    <title>Marianne Houses | Agencia Inmobiliaria de Lujo en La Habana</title>
     <meta name="description" content="Marianne Houses: residencias exclusivas, villas y mansiones en venta y renta en Miramar, Siboney, Kohly, Playa y Vedado." />
+    <meta name="keywords" content="inmobiliaria La Habana, casas de lujo Cuba, rentas Miramar, venta casas Siboney, Marianne Houses" />
 
+    <!-- OPEN GRAPH (Redes Sociales y WhatsApp) -->
+    <meta property="og:site_name" content="Marianne Houses" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Marianne Houses | Agencia Inmobiliaria de Lujo en La Habana" />
-    <meta property="og:description" content="Residencias exclusivas, villas y mansiones de alto nivel en La Habana, Cuba." />
+    <meta property="og:description" content="Residencias exclusivas, villas y mansiones en venta y renta en La Habana." />
     <meta property="og:image" content="https://mariannehouses.com/og-image.jpg" />
     <meta property="og:url" content="https://mariannehouses.com" />
-    <meta property="og:type" content="website" />
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Marianne Houses | Agencia Inmobiliaria de Lujo" />
+    <meta name="twitter:description" content="Residencias exclusivas, villas y mansiones en La Habana." />
+    <meta name="twitter:image" content="https://mariannehouses.com/og-image.jpg" />
+
+    <!-- MARCADO ESTRUCTURADO SCHEMA.ORG (Obliga a Google a mostrar "Marianne Houses" como Nombre del Sitio) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Marianne Houses",
+      "alternateName": ["Marianne Houses Real Estate", "Marianne Houses Cuba"],
+      "url": "https://mariannehouses.com/"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
