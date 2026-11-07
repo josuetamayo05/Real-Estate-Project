@@ -445,6 +445,49 @@ export const mockProperties: Property[] = [
     featured: false,
     sold: false,
     whatsapp: "5352365254"
+  },
+    {
+    id: 'casa-13',
+    title: 'Exclusivo Apartamento en Planta Baja con Jardín en Miramar',
+    slug: 'apartamento-planta-baja-jardin-miramar',
+    operation: 'Venta',
+    zone: 'Miramar',
+    address: 'Miramar, La Habana',
+    price: 180000,
+    hidePrice: false,
+    currency: 'USD',
+    bedrooms: 3,
+    bathrooms: 3,
+    area: 200,
+    parking: 2,
+    propertyType: 'Apartamento',
+    description: 'Excelente apartamento en planta baja en edificación de solo tres niveles en Miramar, ubicado a menos de una cuadra del mar y cercano al Teatro Karl Marx, Centro de Negocios, embajadas y 5ta Avenida. Cuenta con jardín propio, terraza techada, carport, salón comedor, cocina, 3 habitaciones con armarios empotrados, 3 baños (uno de servicio), pasillo interior, dos trasteros y garaje. Dispone de agua fría y caliente en toda la casa, climatización, gas de la calle 24h, tanques de reserva con Kiwant, teléfono fijo y Nauta Hogar. Oportunidad ideal para hogar o inversión de renta.',
+    features: [
+      'Jardín Privado',
+      'Terraza Techada',
+      'Garaje y Carport',
+      'Climatizado',
+      'Gas de la Calle (24h)',
+      'Agua Fría y Caliente',
+      'Presurizador / Kiwant',
+      'Teléfono Fijo y Nauta Hogar',
+      'Trasteros',
+      'Armarios Empotrados',
+      'A menos de 1 cuadra del Mar'
+    ],
+    images: [
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076521/properties/casa-13/v56hgqs1jpccwz1tg1x7.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076759/properties/casa-13/bcdjlgyoiepfo7qgx1c1.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076559/properties/casa-13/rgmzpenjqogirxhcpkbj.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076782/properties/casa-13/bmmskj2jpxl4nfm6qbvy.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076598/properties/casa-13/ksml7rrvelx0h3cyjw8i.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076730/properties/casa-13/cu6ljqdizen8qldzhzhp.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076507/properties/casa-13/fs28ethqorp37brdolnc.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794076655/properties/casa-13/zr2eo5tb5ytarguk7vtz.jpg'
+    ],
+    featured: false,
+    sold: false,
+    whatsapp: '5352365254'
   }
 ];
 

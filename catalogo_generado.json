@@ -1,8 +1,8 @@
 [
   {
-    "id": "casa-12",
-    "title": "Residencia Exclusiva en Casa-12",
-    "slug": "residencia-exclusiva-casa-12",
+    "id": "casa-13",
+    "title": "Residencia Exclusiva en Casa-13",
+    "slug": "residencia-exclusiva-casa-13",
     "operation": "Venta",
     "zone": "Kohly/Siboney",
     "address": "La Habana, Cuba",
@@ -21,21 +21,14 @@
       "Garaje"
     ],
     "images": [
-      "/properties/casa-12/first.jpg",
-      "/properties/casa-12/1793670273862.jpg",
-      "/properties/casa-12/1793670400950.jpg",
-      "/properties/casa-12/1793670529569.jpg",
-      "/properties/casa-12/1793670829019(1).jpg",
-      "/properties/casa-12/1793670925830(1).jpg",
-      "/properties/casa-12/1793672124217.jpg",
-      "/properties/casa-12/20261102_103514.jpg",
-      "/properties/casa-12/20261102_103525.jpg",
-      "/properties/casa-12/20261102_103603.jpg",
-      "/properties/casa-12/20261102_103614(1).jpg",
-      "/properties/casa-12/20261102_103637.jpg",
-      "/properties/casa-12/20261102_103819.jpg",
-      "/properties/casa-12/20261102_103915.jpg",
-      "/properties/casa-12/20261102_104012.jpg"
+      "/properties/casa-13/first.jpg",
+      "/properties/casa-13/27473.jpg",
+      "/properties/casa-13/27474.jpg",
+      "/properties/casa-13/27475.jpg",
+      "/properties/casa-13/27476.jpg",
+      "/properties/casa-13/27478.jpg",
+      "/properties/casa-13/27483.jpg",
+      "/properties/casa-13/27485.jpg"
     ],
     "featured": true,
     "sold": false,
