@@ -488,6 +488,57 @@ export const mockProperties: Property[] = [
     featured: false,
     sold: false,
     whatsapp: '5352365254'
+  },
+    {
+    id: 'casa-14',
+    title: 'Gran Residencia Bi-Planta de 990 m² con Apartamento en Miramar',
+    slug: 'residencia-biplanta-terreno-apartamento-miramar',
+    operation: 'Venta',
+    zone: 'Miramar',
+    address: 'Miramar, La Habana',
+    price: 600000,
+    hidePrice: false,
+    currency: 'USD',
+    bedrooms: 7,
+    bathrooms: 5,
+    area: 990,
+    parking: 2,
+    propertyType: 'Mansión',
+    description: 'Espectacular residencia de dos plantas sobre un gran terreno de 990 m² en Miramar. Una propiedad con un tremendo potencial e ideal para inversión o residencia señorial. En la planta baja cuenta con jardín, recibidor, amplia sala, biblioteca, cocina, comedor, 2 habitaciones y 2 baños. La planta alta alberga 4 habitaciones y 2 baños. Dispone de garaje para 2 vehículos y un amplio patio donde se ubica un apartamento independiente original de la propiedad con 1 habitación y 1 baño adicional.',
+    features: [
+      'Jardín',
+      'Biblioteca',
+      'Recibidor',
+      'Garaje Doble (2 Autos)',
+      'Gran Patio (990 m² total)',
+      'Apartamento Independiente (1 Hab / 1 Baño)',
+      'Ideal Inversión',
+      'Ubicación Privilegiada'
+    ],
+    images: [
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115058/properties/casa-14/umrynw27ccaptp85bvpe.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115587/properties/casa-14/bnffnlkn7am15f1aikx1.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115583/properties/casa-14/ebwvduf0gyvdok2kcnyd.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115506/properties/casa-14/bjas6zaunevmlizqst8c.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115063/properties/casa-14/dx9s1xnc7trptmlbeucw.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794114879/properties/casa-14/gstzkc5drmmi9dy3i6ow.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794114898/properties/casa-14/qnnsgdufcsmrswswfzeq.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115580/properties/casa-14/buuxql5k2ftv9obawnid.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115516/properties/casa-14/zvhm87t1kx6ozge1vgo4.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115592/properties/casa-14/rh5sktqg4p4pelgwgpnx.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115128/properties/casa-14/oonnzqwn3lnu3kcv09va.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115102/properties/casa-14/dozzaxmtbxwhc9ih7ktl.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115544/properties/casa-14/wj0xpvmzeykuche9eiac.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115476/properties/casa-14/rnknldufkjgyuxhvm3ho.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115525/properties/casa-14/hkh0fv3m84fz1y5uedfo.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794114911/properties/casa-14/yjztxyujoggcqlf9fr6k.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794114925/properties/casa-14/cdmgzsztp9k9tmgstpar.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115530/properties/casa-14/dfjwtco9hffinhktkyly.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794115150/properties/casa-14/fq5lndxelslqwykr10xk.jpg'
+    ],
+    featured: false,
+    sold: false,
+    whatsapp: '5352365254'
   }
 ];
 
