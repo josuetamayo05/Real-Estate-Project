@@ -539,6 +539,48 @@ export const mockProperties: Property[] = [
     featured: false,
     sold: false,
     whatsapp: '5352365254'
+  },
+    {
+    id: 'casa-15',
+    title: 'Casa Bi-Planta Independiente con Terraza y Balcón en Miramar',
+    slug: 'casa-biplanta-independiente-terraza-miramar',
+    operation: 'Venta',
+    zone: 'Miramar',
+    address: 'Miramar, La Habana',
+    price: 190000,
+    hidePrice: false,
+    currency: 'USD',
+    bedrooms: 3,
+    bathrooms: 3,
+    area: 220,
+    parking: 1,
+    propertyType: 'Casa',
+    description: 'Magnífica propiedad bi-planta independiente en una de las zonas más tranquilas y céntricas de Miramar, muy cerca de la 5ta Avenida. Combina máxima privacidad, amplitud y excelente ubicación. En la primera planta cuenta con portal, garaje, sala, comedor, cocina y 1 habitación con baño privado. La segunda planta alberga 2 amplias habitaciones, cada una con su baño grande, además de cuarto de lavado, terraza y balcón a la calle. Espacios perfectamente definidos ideales para hogar o inversión.',
+    features: [
+      'Portal',
+      'Garaje',
+      'Terraza',
+      'Balcón a la Calle',
+      'Cuarto de Lavado',
+      'Independencia Total',
+      'Cerca de 5ta Avenida',
+      'Excelente Ubicación'
+    ],
+    images: [
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794581581/properties/casa-15/yahwpu7aja5bv9k2ptua.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794581929/properties/casa-15/sjggfjo5javjem8aqdlq.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794582015/properties/casa-15/snckneow22np5dhlbgk1.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794582125/properties/casa-15/bjmlsnoncyxxmrcastwa.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794582140/properties/casa-15/r2salnvtx60pl7pvu7cz.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794581987/properties/casa-15/ou9eapnwfgponnbnx6pk.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794581953/properties/casa-15/w3uqxi31e4ufhsutlwul.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794581969/properties/casa-15/clo5x1xujxvsi1ig6ftn.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794582081/properties/casa-15/k4po5v2z8uyhfi133f2k.jpg',
+      'https://res.cloudinary.com/fscqxubu/image/upload/v1794582035/properties/casa-15/hsjtmc7onoxmupwurait.jpg'
+    ],
+    featured: false,
+    sold: false,
+    whatsapp: '5352365254'
   }
 ];
 
