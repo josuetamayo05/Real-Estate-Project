@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Bed, Bath, MessageCircle } from 'lucide-react';
 import type { Property } from '../../types';
+import { optimizeImage } from '../../lib/cloudinary';
 
 interface PropertyCardProps {
   property: Property;
@@ -33,7 +34,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
             {property.operation || 'VENTA'}
           </span>
           <img 
-            src={mainImage} 
+            src={optimizeImage(mainImage, 800)}
             alt={property.title} 
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
             loading="lazy"

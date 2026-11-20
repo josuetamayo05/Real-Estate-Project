@@ -1,0 +1,49 @@
+---
+name: nueva-casa
+description: Agrega una nueva propiedad (casa-X) al catálogo de Marianne Houses a partir de una descripción en español; inserta el objeto en mockProperties.ts, sube las fotos a Cloudinary, verifica el build y hace commit + push. Usar cuando el usuario pasa la descripción de una casa y el número de carpeta.
+argument-hint: casa-X  (y pega la descripción de la casa)
+---
+
+# Nueva propiedad: $ARGUMENTS
+
+Ejecuta TODO el flujo sin pedir permiso en cada paso. Solo detente si algo falla.
+
+## 1. Analizar el texto
+De la descripción en español extrae:
+- `price` como número ("160 mil" → 160000, "1.2 millones" → 1200000). Si no hay precio → 0.
+- `bedrooms`, `bathrooms`, `parking` (garaje), `area` en m² (si no aparece, estímalo razonablemente y avísalo al final), `zone`.
+- `operation`: 'Venta' o 'Renta'. `propertyType`: 'Casa' | 'Apartamento' | 'Villa' | 'Mansión' | 'Penthouse'.
+
+## 2. Crear el objeto
+- `title` atractivo con la zona; `slug` en kebab-case, sin acentos, único (compara con los slugs existentes).
+- `description`: profesional y fluida en español, sin inventar datos.
+- `features`: mínimo 6 puntos clave en Title Case.
+
+## 3. Leer la carpeta
+Lista `public/properties/casa-X/`. `images` empieza SIEMPRE con '/properties/casa-X/first.jpg' y luego el resto de imágenes (sin duplicar first.jpg). Si la carpeta no existe o no tiene first.jpg, detente y avisa.
+
+## 4. Editar el código
+INSERTA el objeto al FINAL del array `mockProperties` en `src/data/mockProperties.ts`, copiando el formato de la última entrada. NO modifiques ninguna otra entrada del archivo.
+Reglas estrictas:
+- Solo comillas simples ('').
+- `id: 'casa-X'`, `address: '<Zona>, La Habana'`
+- `currency: 'USD'`
+- `hidePrice: false` salvo que `price` sea 0 (entonces `true`).
+- `featured: false`, `sold: false`, `whatsapp: '5352365254'`
+
+## 5. Cloudinary
+`python3 scripts_py/upload_to_cloudinary.py casa-X`
+Si sale con error (código ≠ 0), vuelve a ejecutarlo una vez. Luego verifica con grep que NO quede ninguna ruta `'/properties/casa-X/` en mockProperties.ts. Si queda, detente y avisa.
+
+## 6. Verificar el build
+`npm run build` (también regenera `public/sitemap.xml` con la nueva casa). Si falla, NO hagas push: muestra el error y corrígelo solo si está en el objeto que agregaste.
+
+## 7. Commit y push
+```
+git add .
+git commit -m "Agregar casa-X en <Zona>"
+git push
+```
+
+## Al final
+Resume en 3-4 líneas: título, precio, zona, nº de fotos y el link `https://www.mariannehouses.com/propiedad/<slug>`.

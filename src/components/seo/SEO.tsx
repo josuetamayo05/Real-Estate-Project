@@ -10,12 +10,16 @@ interface SEOProps {
 export function SEO({ 
   title = 'Marianne Houses | Agencia Inmobiliaria de Lujo en La Habana, Cuba',
   description = 'Marianne Houses: residencias exclusivas, villas y mansiones en venta y renta en Miramar, Siboney, Kohly, Playa y Vedado. Tu experto en bienes raíces de alto nivel en La Habana.',
-  image = 'https://mariannehouses.com/og-image.jpg',
-  url = 'https://mariannehouses.com'
+  image = 'https://www.mariannehouses.com/og-image.jpg',
+  url = 'https://www.mariannehouses.com/'
 }: SEOProps) {
+  // Que siempre aparezca la marca en el título de Google
+  if (!title.includes('Marianne Houses')) title = `${title} | Marianne Houses`;
+
   return (
     <Helmet>
       <title>{title}</title>
+      <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       
       {/* Open Graph (Facebook, WhatsApp, LinkedIn) */}

@@ -15,6 +15,7 @@ import { Footer } from '../components/layout/Footer';
 import { SEO } from '../components/seo/SEO';
 import { getPropertyBySlug } from '../services/propertyService';
 import type { Property } from '../types';
+import { optimizeImage } from '../lib/cloudinary';
 
 export function PropertyDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -86,7 +87,7 @@ export function PropertyDetail() {
         title={property.title}
         description={property.description?.slice(0, 160) || `Propiedad en ${property.zone}, La Habana.`}
         image={coverImage}
-        url={`https://marianne-houses.vercel.app/propiedad/${property.slug}`}
+        url={`https://www.mariannehouses.com/propiedad/${property.slug}`}
       />
 
       <Navbar />
@@ -124,7 +125,7 @@ export function PropertyDetail() {
         <div className="space-y-3 mb-10">
           <div className="aspect-[16/9] md:aspect-[21/9] bg-gray-200 rounded-xl overflow-hidden shadow-md">
             <img
-              src={selectedImg || property.images[0]}
+              src={optimizeImage(selectedImg || property.images[0], 1600)}
               alt={property.title}
               className="w-full h-full object-cover"
             />
@@ -141,7 +142,7 @@ export function PropertyDetail() {
                       : 'border-transparent opacity-70 hover:opacity-100'
                   }`}
                 >
-                  <img src={img} alt="" className="w-full h-full object-cover" />
+                  <img src={optimizeImage(img, 200)} alt="" loading="lazy" className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>

@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Fotos de propiedades: se suben a Cloudinary, no al repo
+public/properties/**/*.jpg
+public/properties/**/*.jpeg
+public/properties/**/*.JPG
+public/properties/**/*.JPEG
+public/properties/**/*.png
+public/properties/**/*.PNG
+public/properties/**/*.webp
+public/properties/**/*.heic
+public/properties/**/*.HEIC

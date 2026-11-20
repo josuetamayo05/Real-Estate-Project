@@ -73,6 +73,7 @@ def main():
         return
 
     print(f" 📦 Se encontraron {total} imágenes locales para subir.")
+    fallidas = []
 
     for idx, path_str in enumerate(local_paths, 1):
         clean_path = path_str.strip("'") # ej. /properties/casa-7/first.jpg
@@ -99,8 +100,16 @@ def main():
                 time.sleep(0.5)
             else:
                 print("⏭️  Error en Cloudinary.")
+                fallidas.append(clean_path)
         else:
             print(f"\n 🔍 No encontrado en: {full_local_path}")
+            fallidas.append(clean_path)
+
+    if fallidas:
+        print(f"\n ⚠️  {len(fallidas)} imagen(es) NO se subieron. Vuelve a ejecutar el script:")
+        for f in fallidas:
+            print(f"    - {f}")
+        sys.exit(1)
 
     print("\n ✨ ¡Proceso completado con éxito!")
 
