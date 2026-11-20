@@ -19,8 +19,12 @@ De la descripción en español extrae:
 - `description`: profesional y fluida en español, sin inventar datos.
 - `features`: mínimo 6 puntos clave en Title Case.
 
-## 3. Leer la carpeta
-Lista `public/properties/casa-X/`. `images` empieza SIEMPRE con '/properties/casa-X/first.jpg' y luego el resto de imágenes (sin duplicar first.jpg). Si la carpeta no existe o no tiene first.jpg, detente y avisa.
+## 3. Fotos y carpeta
+Si `public/properties/casa-X/` NO existe o está vacía, importa las fotos de WhatsApp desde Descargas:
+`scripts/import-whatsapp-photos.sh casa-X` (o `scripts/import-whatsapp-photos.sh casa-X AAAA-MM-DD` si el usuario indica una fecha). Toma las fotos "WhatsApp Image ..." del día más reciente, la primera enviada queda como first.jpg. Si el usuario dice que la portada es otra foto (ej. "la portada es la 3"), intercambia los nombres first.jpg ↔ foto-03.jpg.
+Si el script falla, detente y muestra el mensaje.
+
+Luego lista `public/properties/casa-X/`. `images` empieza SIEMPRE con '/properties/casa-X/first.jpg' y luego el resto de imágenes (sin duplicar first.jpg). Si la carpeta no existe o no tiene first.jpg, detente y avisa.
 
 ## 4. Editar el código
 INSERTA el objeto al FINAL del array `mockProperties` en `src/data/mockProperties.ts`, copiando el formato de la última entrada. NO modifiques ninguna otra entrada del archivo.
