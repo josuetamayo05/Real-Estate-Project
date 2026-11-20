@@ -26,6 +26,16 @@ fi
 mkdir -p "$DEST"
 
 i=1
+# Si el usuario renombró una foto como first.jpg/first.jpeg en Descargas, esa es la portada
+for p in first.jpg first.jpeg first.JPG first.JPEG; do
+  if [ -f "$SRC/$p" ]; then
+    mv "$SRC/$p" "$DEST/first.jpg"
+    echo "📌 Portada: la foto que renombraste como $p"
+    i=2
+    break
+  fi
+done
+
 for f in "${FOTOS[@]}"; do
   ext="$(echo "${f##*.}" | tr 'A-Z' 'a-z')"
   if [ "$i" -eq 1 ]; then name="first"; else name="$(printf 'foto-%02d' "$i")"; fi
@@ -37,4 +47,4 @@ for f in "${FOTOS[@]}"; do
   i=$((i + 1))
 done
 
-echo "✅ ${#FOTOS[@]} fotos del $FECHA movidas a public/properties/$CASA (portada: first.jpg)"
+echo "✅ $((i - 1)) fotos del $FECHA movidas a public/properties/$CASA (portada: first.jpg)"

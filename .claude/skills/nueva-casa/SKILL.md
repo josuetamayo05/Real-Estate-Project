@@ -21,7 +21,7 @@ De la descripción en español extrae:
 
 ## 3. Fotos y carpeta
 Si `public/properties/casa-X/` NO existe o está vacía, importa las fotos de WhatsApp desde Descargas:
-`scripts/import-whatsapp-photos.sh casa-X` (o `scripts/import-whatsapp-photos.sh casa-X AAAA-MM-DD` si el usuario indica una fecha). Toma las fotos "WhatsApp Image ..." del día más reciente, la primera enviada queda como first.jpg. Si el usuario dice que la portada es otra foto (ej. "la portada es la 3"), intercambia los nombres first.jpg ↔ foto-03.jpg.
+`scripts/import-whatsapp-photos.sh casa-X` (o `scripts/import-whatsapp-photos.sh casa-X AAAA-MM-DD` si el usuario indica una fecha). Toma las fotos "WhatsApp Image ..." del día más reciente. Si el usuario renombró una foto como `first.jpg` en Descargas, esa es la portada; si no, la primera enviada queda como first.jpg. Si el usuario dice que la portada es otra foto (ej. "la portada es la 3"), intercambia los nombres first.jpg ↔ foto-03.jpg.
 Si el script falla, detente y muestra el mensaje.
 
 Luego lista `public/properties/casa-X/`. `images` empieza SIEMPRE con '/properties/casa-X/first.jpg' y luego el resto de imágenes (sin duplicar first.jpg). Si la carpeta no existe o no tiene first.jpg, detente y avisa.
