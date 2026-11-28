@@ -1,6 +1,7 @@
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { ContactForm } from '../components/common/ContactForm';
 
 export function Contact() {
   return (
@@ -29,14 +30,7 @@ export function Contact() {
             </div>
           </div>
 
-          <form onSubmit={(e) => { e.preventDefault(); alert('Mensaje enviado.'); }} className="space-y-3">
-            <input type="text" placeholder="Su Nombre" required className="w-full h-10 px-3 bg-gray-50 border border-gray-200 rounded text-xs focus:outline-none focus:border-[#C9A961]" />
-            <input type="email" placeholder="Su Email" required className="w-full h-10 px-3 bg-gray-50 border border-gray-200 rounded text-xs focus:outline-none focus:border-[#C9A961]" />
-            <textarea placeholder="Mensaje" rows={4} required className="w-full p-3 bg-gray-50 border border-gray-200 rounded text-xs focus:outline-none focus:border-[#C9A961]" />
-            <button type="submit" className="w-full h-10 bg-gradient-to-r from-[#D4AF37] to-[#C9A961] text-black font-extrabold text-xs uppercase tracking-wider rounded">
-              ENVIAR MENSAJE
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </main>
       <Footer />
