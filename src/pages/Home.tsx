@@ -5,9 +5,12 @@ import { FilterBar } from '../components/home/FilterBar';
 import { FeaturedProperties } from '../components/home/FeaturedProperties';
 import { SEO } from '../components/seo/SEO';
 import { ContactForm } from '../components/common/ContactForm';
+import { optimizeImage } from '../lib/cloudinary';
 
-// Foto enviada por la clienta para esta sección
-const ABOUT_BG = '/about-bg.jpg';
+// Fondo de 'Sobre nosotros': foto-02 de la casa-16 (fachada con palmas).
+// Alternativa guardada: '/about-bg.jpg' (sala que envió la clienta).
+const ABOUT_BG =
+  'https://res.cloudinary.com/fscqxubu/image/upload/v1795834428/properties/casa-16/sb2nznnfks7t0pznrz5k.jpg';
 
 
 export function Home() {
@@ -25,9 +28,9 @@ export function Home() {
 
           {/* Sobre Nosotros (fondo negro con el logo, como la marca) */}
           <div className="relative bg-[#0A0A0A] text-white p-8 sm:p-12 flex flex-col justify-center overflow-hidden">
-            {/* Fondo: foto enviada por la clienta con degradado oscuro encima */}
+            {/* Fondo: foto con degradado oscuro encima */}
             <img
-              src={ABOUT_BG}
+              src={optimizeImage(ABOUT_BG, 1200)}
               alt=""
               aria-hidden="true"
               loading="lazy"
