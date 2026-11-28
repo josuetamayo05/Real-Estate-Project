@@ -8,6 +8,9 @@ argument-hint: casa-X  (y pega la descripción de la casa)
 
 Ejecuta TODO el flujo sin pedir permiso en cada paso. Solo detente si algo falla.
 
+## 0. Número de casa
+Si el usuario no da el número (o dice que no lo recuerda), usa el siguiente al último `id: 'casa-N'` de mockProperties.ts.
+
 ## 1. Analizar el texto
 De la descripción en español extrae:
 - `price` como número ("160 mil" → 160000, "1.2 millones" → 1200000). Si no hay precio → 0.
@@ -21,7 +24,7 @@ De la descripción en español extrae:
 
 ## 3. Fotos y carpeta
 Si `public/properties/casa-X/` NO existe o está vacía, importa las fotos de WhatsApp desde Descargas:
-`scripts/import-whatsapp-photos.sh casa-X` (o `scripts/import-whatsapp-photos.sh casa-X AAAA-MM-DD` si el usuario indica una fecha). Toma las fotos "WhatsApp Image ..." del día más reciente. Si el usuario renombró una foto como `first.jpg` en Descargas, esa es la portada; si no, la primera enviada queda como first.jpg. Si el usuario dice que la portada es otra foto (ej. "la portada es la 3"), intercambia los nombres first.jpg ↔ foto-03.jpg.
+`scripts/import-whatsapp-photos.sh casa-X` (o `scripts/import-whatsapp-photos.sh casa-X AAAA-MM-DD` si el usuario indica una fecha). Reconoce fotos con nombre numérico (572.jpg...) descargadas en las últimas 48 h, o si no hay, las "WhatsApp Image ..." del día más reciente. También las reduce a máx. 2000 px (la conexión del usuario sube a ~70 KB/s; fotos de 5 MB hacen que Cloudinary corte por timeout). Antes de mover, si no es obvio que todas son de la casa, revisa una hoja de contactos de las fotos. Si el usuario renombró una foto como `first.jpg` en Descargas, esa es la portada; si no, la primera enviada queda como first.jpg. Si el usuario dice que la portada es otra foto (ej. "la portada es la 3"), intercambia los nombres first.jpg ↔ foto-03.jpg.
 Si el script falla, detente y muestra el mensaje.
 
 Luego lista `public/properties/casa-X/`. `images` empieza SIEMPRE con '/properties/casa-X/first.jpg' y luego el resto de imágenes (sin duplicar first.jpg). Si la carpeta no existe o no tiene first.jpg, detente y avisa.
