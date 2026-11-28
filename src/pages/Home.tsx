@@ -5,10 +5,9 @@ import { FilterBar } from '../components/home/FilterBar';
 import { FeaturedProperties } from '../components/home/FeaturedProperties';
 import { SEO } from '../components/seo/SEO';
 import { ContactForm } from '../components/common/ContactForm';
-import { optimizeImage } from '../lib/cloudinary';
 
-const ABOUT_BG =
-  'https://res.cloudinary.com/fscqxubu/image/upload/v1794115592/properties/casa-14/rh5sktqg4p4pelgwgpnx.jpg';
+// Foto enviada por la clienta para esta sección
+const ABOUT_BG = '/about-bg.jpg';
 
 
 export function Home() {
@@ -26,9 +25,9 @@ export function Home() {
 
           {/* Sobre Nosotros (fondo negro con el logo, como la marca) */}
           <div className="relative bg-[#0A0A0A] text-white p-8 sm:p-12 flex flex-col justify-center overflow-hidden">
-            {/* Fondo: foto real del catálogo (casa-14, jardín) con degradado oscuro encima */}
+            {/* Fondo: foto enviada por la clienta con degradado oscuro encima */}
             <img
-              src={optimizeImage(ABOUT_BG, 1200)}
+              src={ABOUT_BG}
               alt=""
               aria-hidden="true"
               loading="lazy"
@@ -43,7 +42,7 @@ export function Home() {
               Su hogar en La Habana, con total confianza
             </h2>
             <p className="text-gray-300 text-sm font-light leading-relaxed">
-              Marianne Houses es compromiso con la excelencia, el lujo y la firmeza que La Habana requiere. Nos especializamos en residencias independientes, casas coloniales y mansiones exclusivas, garantizando discreción y máxima confidencialidad en cada transacción.
+              Detrás de Marianne Houses hay una manera de trabajar basada en la honestidad, la atención a los detalles y el respeto por la esencia real de cada espacio. Me gusta mostrar las propiedades tal como son, cuidando su presentación sin perder lo que las hace auténticas, para que encuentres un lugar que realmente conecte contigo. Más allá de una operación inmobiliaria, mi compromiso es acompañarte con criterio y cercanía para que tu visión sea la correcta.
             </p>
             </div>
           </div>
