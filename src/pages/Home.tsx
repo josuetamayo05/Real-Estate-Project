@@ -36,12 +36,6 @@ export function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/50 to-black/25" />
             <div className="relative">
-            <img
-              src="/icon-192.png"
-              alt="Marianne Houses"
-              className="w-16 h-16 rounded-lg mb-6"
-              loading="lazy"
-            />
             <p className="text-[#C9A961] text-[10px] sm:text-xs font-bold uppercase tracking-[0.35em] mb-2">
               Sobre nosotros
             </p>
