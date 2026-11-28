@@ -8,7 +8,7 @@ import { ContactForm } from '../components/common/ContactForm';
 import { optimizeImage } from '../lib/cloudinary';
 
 const ABOUT_BG =
-  'https://res.cloudinary.com/fscqxubu/image/upload/v1793047969/properties/casa-6/eaofoapoecuyrrjzhqow.jpg';
+  'https://res.cloudinary.com/fscqxubu/image/upload/v1794115592/properties/casa-14/rh5sktqg4p4pelgwgpnx.jpg';
 
 
 export function Home() {
@@ -26,7 +26,7 @@ export function Home() {
 
           {/* Sobre Nosotros (fondo negro con el logo, como la marca) */}
           <div className="relative bg-[#0A0A0A] text-white p-8 sm:p-12 flex flex-col justify-center overflow-hidden">
-            {/* Fondo: foto real del catálogo (casa-6, piscina de noche) con degradado oscuro encima */}
+            {/* Fondo: foto real del catálogo (casa-14, jardín) con degradado oscuro encima */}
             <img
               src={optimizeImage(ABOUT_BG, 1200)}
               alt=""
@@ -34,7 +34,7 @@ export function Home() {
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/75 to-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/50 to-black/25" />
             <div className="relative">
             <img
               src="/icon-192.png"
