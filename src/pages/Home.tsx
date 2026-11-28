@@ -4,6 +4,11 @@ import { Hero } from '../components/home/Hero';
 import { FilterBar } from '../components/home/FilterBar';
 import { FeaturedProperties } from '../components/home/FeaturedProperties';
 import { SEO } from '../components/seo/SEO';
+import { ContactForm } from '../components/common/ContactForm';
+import { optimizeImage } from '../lib/cloudinary';
+
+const ABOUT_BG =
+  'https://res.cloudinary.com/fscqxubu/image/upload/v1794115592/properties/casa-14/rh5sktqg4p4pelgwgpnx.jpg';
 
 
 export function Home() {
@@ -17,60 +22,47 @@ export function Home() {
 
       {/* SOBRE NOSOTROS Y CONTACTO DIRECTO */}
       <section id="nosotros" className="max-w-6xl mx-auto px-4 mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 shadow-sm">
-          
-          {/* Texto Sobre Nosotros */}
-          <div>
-            <h2 className="font-serif text-xl font-bold text-[#1A1A1A] mb-3 uppercase tracking-wider">
-              SOBRE NOSOTROS
+        <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+
+          {/* Sobre Nosotros (fondo negro con el logo, como la marca) */}
+          <div className="relative bg-[#0A0A0A] text-white p-8 sm:p-12 flex flex-col justify-center overflow-hidden">
+            {/* Fondo: foto real del catálogo (casa-14, jardín) con degradado oscuro encima */}
+            <img
+              src={optimizeImage(ABOUT_BG, 1200)}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/50 to-black/25" />
+            <div className="relative">
+            <img
+              src="/icon-192.png"
+              alt="Marianne Houses"
+              className="w-16 h-16 rounded-lg mb-6"
+              loading="lazy"
+            />
+            <p className="text-[#C9A961] text-[10px] sm:text-xs font-bold uppercase tracking-[0.35em] mb-2">
+              Sobre nosotros
+            </p>
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-4">
+              Su hogar en La Habana, con total confianza
             </h2>
-            <div className="flex gap-4 items-start">
-              <p className="text-gray-600 text-xs font-normal leading-relaxed flex-1">
-                Marianne Houses es compromiso con la excelencia, el lujo y la firmeza que La Habana requiere. Nos especializamos en residencias independientes, casas coloniales y mansiones exclusivas, garantizando discreción y máxima confidencialidad en cada transacción.
-              </p>
-              <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=300&q=80" 
-                alt="Marianne Houses Nos" 
-                className="w-28 h-20 object-cover rounded-lg shadow-sm border border-gray-100 flex-shrink-0"
-              />
+            <p className="text-gray-300 text-sm font-light leading-relaxed">
+              Marianne Houses es compromiso con la excelencia, el lujo y la firmeza que La Habana requiere. Nos especializamos en residencias independientes, casas coloniales y mansiones exclusivas, garantizando discreción y máxima confidencialidad en cada transacción.
+            </p>
             </div>
           </div>
 
-          {/* Formulario Directo de Contacto */}
-          <div id="contacto" className="bg-white p-2 rounded-xl">
-            <h3 className="font-bold text-xs text-gray-800 mb-3">
-              Directo de contacto
+          {/* Formulario de contacto (abre WhatsApp) */}
+          <div id="contacto" className="bg-white p-8 sm:p-12">
+            <h3 className="font-serif text-xl font-bold text-[#1A1A1A] mb-1">
+              Contacto directo
             </h3>
-            <form onSubmit={(e) => { e.preventDefault(); alert('Solicitud de información enviada correctamente.'); }} className="space-y-3">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  required 
-                  className="w-full h-9 px-3 bg-white border border-gray-300 rounded text-xs focus:outline-none focus:border-[#C9A961]"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  required 
-                  className="w-full h-9 px-3 bg-white border border-gray-300 rounded text-xs focus:outline-none focus:border-[#C9A961]"
-                />
-              </div>
-              <div>
-                <input 
-                  type="text" 
-                  placeholder="Solicitara información" 
-                  required 
-                  className="w-full h-14 px-3 bg-white border border-gray-300 rounded text-xs focus:outline-none focus:border-[#C9A961]"
-                />
-              </div>
-              <button 
-                type="submit"
-                className="w-full h-10 bg-gradient-to-r from-[#D4AF37] to-[#C9A961] hover:brightness-105 text-black font-extrabold text-xs uppercase tracking-wider rounded transition-all shadow-sm"
-              >
-                SOLICITAR INFORMACIÓN
-              </button>
-            </form>
+            <p className="text-xs text-gray-500 mb-5">
+              Cuéntenos qué busca y le responderemos personalmente.
+            </p>
+            <ContactForm />
           </div>
 
         </div>

@@ -49,8 +49,11 @@ export function PropertyCard({ property }: PropertyCardProps) {
           <h3 className="text-xl sm:text-2xl font-extrabold text-[#1A1A1A] tracking-tight mb-1">
             {priceDisplay}
           </h3>
-          <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">
+          <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase text-[#C9A961] mb-1.5">
             {property.zone ? property.zone.toUpperCase() : 'LA HABANA'}
+          </p>
+          <p className="text-xs sm:text-[13px] text-gray-600 leading-snug line-clamp-2 min-h-[2.5em] mb-3">
+            {property.title}
           </p>
 
           {/* 3. BARRA DE ICONOS CENTRADOS (Habitaciones / Baños) */}
@@ -71,7 +74,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
       <div className="p-4 pt-0 grid grid-cols-2 gap-2">
         <Link
           to={`/propiedad/${property.slug || property.id}`}
-          className="h-10 bg-[#C5C5C5] hover:bg-[#b5b5b5] text-gray-900 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider rounded-md flex items-center justify-center transition-colors text-center"
+          className="h-10 bg-[#1A1A1A] hover:bg-black text-white font-bold text-[10px] sm:text-[11px] uppercase tracking-wider rounded-md flex items-center justify-center transition-colors text-center"
         >
           VER DETALLES
         </Link>
