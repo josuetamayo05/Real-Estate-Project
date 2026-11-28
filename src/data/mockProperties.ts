@@ -595,10 +595,10 @@ export const mockProperties: Property[] = [
     currency: 'USD',
     bedrooms: 6,
     bathrooms: 3,
-    area: 450,
+    area: 0,
     parking: 2,
-    propertyType: 'Mansión',
-    description: 'Una joya de la arquitectura capitalista en las Alturas de Miramar, concebida para quienes valoran el confort refinado, la distinción y la privacidad absoluta. Esta impresionante residencia de dos plantas combina elegancia estructural con amplios espacios de entretenimiento. La planta baja da la bienvenida con un amplio jardín y área de estacionamiento, garaje doble y un majestuoso recibidor que conecta con la sala de estar y el comedor; la cocina principal tiene acceso directo al garaje. En el exterior se encuentran una gran terraza con área de billar, patio ajardinado, una espectacular piscina, ranchón para festejos y un apartamento independiente, ideal para visitas o personal de servicio. La segunda planta, de uso privado, cuenta con un recibidor que distribuye hacia 6 confortables habitaciones y 3 baños completos, y culmina en una majestuosa terraza panorámica con vistas despejadas a la piscina y al patio. Una inversión única por su ubicación privilegiada, su amplitud y su potencial de disfrute en una de las zonas más codiciadas de La Habana.',
+    propertyType: 'Casa',
+    description: 'Una joya de la arquitectura capitalista en las Alturas de Miramar, concebida para quienes valoran el confort refinado, la distinción y la privacidad absoluta. Esta impresionante residencia de dos plantas combina elegancia estructural con amplios espacios de entretenimiento. La planta baja da la bienvenida con un amplio jardín y área de descanso para vehículos, garaje doble y un majestuoso recibidor que conecta con la sala de estar y el comedor; la cocina principal tiene acceso directo al garaje. En el exterior se encuentran una gran terraza con área de billar, patio ajardinado, una espectacular piscina, ranchón para festejos y un apartamento independiente, ideal para visitas o personal. La segunda planta, de uso privado, cuenta con un recibidor que distribuye hacia 6 confortables habitaciones y 3 baños completos, y culmina en una majestuosa terraza panorámica con vistas despejadas a la piscina y al patio. Una inversión única por su ubicación privilegiada, su amplitud y su potencial de disfrute en una de las zonas más codiciadas de La Habana.',
     features: [
       'Piscina',
       'Ranchón para Festejos',

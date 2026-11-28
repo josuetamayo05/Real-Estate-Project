@@ -14,12 +14,14 @@ Si el usuario no da el número (o dice que no lo recuerda), usa el siguiente al 
 ## 1. Analizar el texto
 De la descripción en español extrae:
 - `price` como número ("160 mil" → 160000, "1.2 millones" → 1200000). Si no hay precio → 0.
-- `bedrooms`, `bathrooms`, `parking` (garaje), `area` en m² (si no aparece, estímalo razonablemente y avísalo al final), `zone`.
+- `bedrooms`, `bathrooms`, `parking` (garaje), `area` en m², `zone`.
+- **NUNCA inventes ni estimes datos** (la clienta lo exige: sería mentir). Si un dato no aparece en el texto: `area: 0` (la web muestra "m² a consultar"), `price: 0` (muestra "Consultar Precio"). Si faltan habitaciones/baños, detente y pregunta. Al final lista qué datos faltaron.
 - `operation`: 'Venta' o 'Renta'. `propertyType`: 'Casa' | 'Apartamento' | 'Villa' | 'Mansión' | 'Penthouse'.
 
 ## 2. Crear el objeto
 - `title` atractivo con la zona; `slug` en kebab-case, sin acentos, único (compara con los slugs existentes).
-- `description`: profesional y fluida en español, sin inventar datos.
+- `description`: profesional y fluida en español, pero SOLO con lo que dice el texto de la clienta (no agregues detalles como "personal de servicio", vistas, materiales, etc. que ella no mencionó). `features` también solo con cosas del texto.
+- `propertyType`: por defecto 'Casa'. Usa otro solo si el texto lo dice explícitamente (apartamento, villa, penthouse, mansión).
 - `features`: mínimo 6 puntos clave en Title Case.
 
 ## 3. Fotos y carpeta

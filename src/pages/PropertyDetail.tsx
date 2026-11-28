@@ -163,7 +163,9 @@ export function PropertyDetail() {
               </div>
               <div className="border-r border-gray-100">
                 <Maximize2 className="w-5 h-5 text-[#C9A961] mx-auto mb-1" />
-                <p className="text-xs font-bold text-gray-800">{property.area} m²</p>
+                <p className="text-xs font-bold text-gray-800">
+                  {property.area > 0 ? `${property.area} m²` : 'm² a consultar'}
+                </p>
               </div>
               <div>
                 <Car className="w-5 h-5 text-[#C9A961] mx-auto mb-1" />
