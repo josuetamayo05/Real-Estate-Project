@@ -5,6 +5,10 @@ import { FilterBar } from '../components/home/FilterBar';
 import { FeaturedProperties } from '../components/home/FeaturedProperties';
 import { SEO } from '../components/seo/SEO';
 import { ContactForm } from '../components/common/ContactForm';
+import { optimizeImage } from '../lib/cloudinary';
+
+const ABOUT_BG =
+  'https://res.cloudinary.com/fscqxubu/image/upload/v1793047969/properties/casa-6/eaofoapoecuyrrjzhqow.jpg';
 
 
 export function Home() {
@@ -21,7 +25,17 @@ export function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
 
           {/* Sobre Nosotros (fondo negro con el logo, como la marca) */}
-          <div className="bg-[#0A0A0A] text-white p-8 sm:p-12 flex flex-col justify-center">
+          <div className="relative bg-[#0A0A0A] text-white p-8 sm:p-12 flex flex-col justify-center overflow-hidden">
+            {/* Fondo: foto real del catálogo (casa-6, piscina de noche) con degradado oscuro encima */}
+            <img
+              src={optimizeImage(ABOUT_BG, 1200)}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/75 to-black/50" />
+            <div className="relative">
             <img
               src="/icon-192.png"
               alt="Marianne Houses"
@@ -37,6 +51,7 @@ export function Home() {
             <p className="text-gray-300 text-sm font-light leading-relaxed">
               Marianne Houses es compromiso con la excelencia, el lujo y la firmeza que La Habana requiere. Nos especializamos en residencias independientes, casas coloniales y mansiones exclusivas, garantizando discreción y máxima confidencialidad en cada transacción.
             </p>
+            </div>
           </div>
 
           {/* Formulario de contacto (abre WhatsApp) */}
